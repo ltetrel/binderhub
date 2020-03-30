@@ -1,0 +1,345 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>2. Set up the container registry &#8212; BinderHub 0.1.0 documentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="https://gitcdn.link/repo/jupyterhub/binder/master/doc/_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link href="_static/css/index.css" rel="stylesheet">
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. Set up BinderHub" href="setup-binderhub.html" />
+    <link rel="prev" title="1. Create your cloud resources" href="create-cloud-resources.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+
+<a class="navbar-brand" href="index.html">
+  <img src="_static/logo.png" class="logo" alt="logo">
+</a>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div id="navbar-menu" class="collapse navbar-collapse">
+  <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+    <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+    </li>
+    
+    
+    <li class="nav-item active">
+        <a class="nav-link" href="zero-to-binderhub/index.html">Zero to BinderHub</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="customization/index.html">Customization</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="developer/index.html">Administrators and developers</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="community/index.html">Community</a>
+    </li>
+    
+    
+  </ul>
+  <ul class="navbar-nav ml-auto">
+    
+    
+  </ul>
+</div>
+    </nav>
+    
+
+    <div class="container-fluid">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+        
+          
+              <li class="">
+                  <a href="create-cloud-resources.html">Create your cloud resources</a>
+              </li>
+          
+        
+          
+              <li class="active">
+                  <a href="">Set up the container registry</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="setup-binderhub.html">Set up BinderHub</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="turn-off.html">Tear down your Binder deployment</a>
+              </li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+
+
+<div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#set-up-google-container-registry" class="nav-link">Set up Google Container Registry</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#set-up-docker-hub-registry" class="nav-link">Set up Docker Hub registry</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#set-up-azure-container-registry" class="nav-link">Set up Azure Container Registry</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#next-step" class="nav-link">Next step</a>
+        </li>
+    
+    </ul>
+</nav>
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="set-up-the-container-registry">
+<span id="setup-registry"></span><h1>2. Set up the container registry<a class="headerlink" href="#set-up-the-container-registry" title="Permalink to this headline">¶</a></h1>
+<p>BinderHub will build Docker images out of Git repositories, and then push
+them to a Docker registry so that JupyterHub can launch user servers based
+on these images. You can use any registry that
+you like, though this guide covers how to properly configure several popular
+registries. The next step, <a class="reference internal" href="setup-binderhub.html"><span class="doc">Set up BinderHub</span></a>, explains how you can
+properly configure BinderHub to use one of these registries.</p>
+<div class="section" id="set-up-google-container-registry">
+<span id="use-gcr"></span><h2>2.1. Set up Google Container Registry<a class="headerlink" href="#set-up-google-container-registry" title="Permalink to this headline">¶</a></h2>
+<p>To use Google Container Registry (<code class="docutils literal notranslate"><span class="pre">gcr.io</span></code>), you’ll need to provide BinderHub
+with proper credentials so it can push images. You can do so by creating a
+service account that has authorization to push to Google Container Registry:</p>
+<ol class="arabic simple">
+<li><p>Go to <a class="reference external" href="http://console.cloud.google.com">console.cloud.google.com</a></p></li>
+<li><p>Make sure your project is selected</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">&lt;top-left</span> <span class="pre">menu</span> <span class="pre">w/</span> <span class="pre">three</span> <span class="pre">horizontal</span> <span class="pre">bars&gt;</span> <span class="pre">-&gt;</span> <span class="pre">IAM</span> <span class="pre">&amp;</span> <span class="pre">Admin</span> <span class="pre">-&gt;</span> <span class="pre">Service</span> <span class="pre">Accounts</span></code> menu option</p></li>
+<li><p>Click <strong>Create service account</strong></p></li>
+<li><p>Give your account a descriptive name such as “binderhub-builder”</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Role</span> <span class="pre">-&gt;</span> <span class="pre">Storage</span> <span class="pre">-&gt;</span> <span class="pre">Storage</span> <span class="pre">Admin</span></code> menu option</p></li>
+<li><p>Click <strong>Create Key</strong></p></li>
+<li><p>Leave key type as default of <strong>JSON</strong></p></li>
+<li><p>Click <strong>Create</strong></p></li>
+</ol>
+<p>These steps will download a <strong>JSON file</strong> to your computer. The JSON file
+contains the password that can be used to push Docker images to the <code class="docutils literal notranslate"><span class="pre">gcr.io</span></code>
+registry.</p>
+<div class="alert alert-warning">
+<p class="admonition-title">Warning</p>
+<p>Don’t share the contents of this JSON file with anyone. It can be used to
+gain access to your google cloud account!</p>
+</div>
+<div class="alert alert-primary">
+<p class="admonition-title">Important</p>
+<p>Make sure to store this JSON file as you cannot generate a second one
+without re-doing the steps above.</p>
+</div>
+</div>
+<div class="section" id="set-up-docker-hub-registry">
+<span id="use-docker-hub"></span><h2>2.2. Set up Docker Hub registry<a class="headerlink" href="#set-up-docker-hub-registry" title="Permalink to this headline">¶</a></h2>
+<p>To use <strong>Docker Hub</strong> (<code class="docutils literal notranslate"><span class="pre">hub.docker.com</span></code>) as a registry first you have to create a
+<a class="reference external" href="https://docs.docker.com/docker-id/">Docker ID account</a>
+in <a class="reference external" href="https://hub.docker.com/">Docker Hub</a>. Your
+Docker ID (username) and password are used to push Docker images to the registry.</p>
+<p>If you want to store Docker images under an organization, you can
+<a class="reference external" href="https://docs.docker.com/docker-hub/orgs/">create an organization</a>.
+This is useful if different Binder instances want to use same registry to store images.</p>
+</div>
+<div class="section" id="set-up-azure-container-registry">
+<span id="use-acr"></span><h2>2.3. Set up Azure Container Registry<a class="headerlink" href="#set-up-azure-container-registry" title="Permalink to this headline">¶</a></h2>
+<p>To use Azure Container Registry (ACR), you’ll need to provide BinderHub with proper credentials so it can push images.
+You can do so by creating a <a class="reference external" href="https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals">Service Principal</a> that has the <a class="reference external" href="https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#acrpush">AcrPush</a> role.</p>
+<p>This section uses the Azure command line.
+Installation instructions can be found in the <a class="reference external" href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest">Microsoft docs</a>.</p>
+<ol class="arabic">
+<li><p>Login to your Azure account:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">az</span> <span class="n">login</span>
+</pre></div>
+</div>
+</li>
+<li><p>Select your chosen subscription:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">az</span> <span class="n">account</span> <span class="nb">set</span> <span class="o">-</span><span class="n">s</span> <span class="o">&lt;</span><span class="n">SUBSCRIPTION</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>You can see which subscriptions you have available by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">az</span> <span class="n">account</span> <span class="nb">list</span> <span class="o">--</span><span class="n">refresh</span> <span class="o">--</span><span class="n">output</span> <span class="n">table</span>
+</pre></div>
+</div>
+</div>
+<ol class="arabic" start="3">
+<li><p>If you <strong>do not</strong> have a Resource Group, then create one:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">az</span> <span class="n">group</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="o">&lt;</span><span class="n">RESOURCE_GROUP_NAME</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">location</span> <span class="o">&lt;</span><span class="n">RESOURCE_GROUP_LOCATION</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">output</span> <span class="n">table</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>where <code class="docutils literal notranslate"><span class="pre">&lt;RESOURCE_GROUP_LOCATION&gt;</span></code> refers to a data centre <strong>region</strong>.
+See a list of regions <a class="reference external" href="https://azure.microsoft.com/en-us/global-infrastructure/locations/">here</a>.</p>
+<p>If you already have a Resource Group you’d like to use, then you can skip this step.</p>
+<ol class="arabic" start="4">
+<li><p>Create the ACR:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">az</span> <span class="n">acr</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="o">&lt;</span><span class="n">ACR_NAME</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">resource</span><span class="o">-</span><span class="n">group</span> <span class="o">&lt;</span><span class="n">RESOURCE_GROUP_NAME</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">sku</span> <span class="n">Basic</span> <span class="o">--</span><span class="n">output</span> <span class="n">table</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;ACR_NAME&gt;</span></code> must be between 5-50 alphanumeric characters and is unique to Azure.
+If you’re not sure your chosen name is available, you can run <code class="docutils literal notranslate"><span class="pre">az</span> <span class="pre">acr</span> <span class="pre">check-name</span> <span class="pre">--name</span> <span class="pre">&lt;ACR_NAME&gt;</span> <span class="pre">--output</span> <span class="pre">table</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--sku</span></code> is the pricing and capacity tier for the registry.
+See <a class="reference external" href="https://docs.microsoft.com/en-us/azure/container-registry/container-registry-skus">this page</a> for more details.</p></li>
+</ul>
+<ol class="arabic" start="5">
+<li><p>Login in the ACR:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">az</span> <span class="n">acr</span> <span class="n">login</span> <span class="o">--</span><span class="n">name</span> <span class="o">&lt;</span><span class="n">ACR_NAME</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Note down the AppID of the ACR:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">az</span> <span class="n">acr</span> <span class="n">show</span> <span class="o">--</span><span class="n">name</span> <span class="o">&lt;</span><span class="n">ACR_NAME</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">query</span> <span class="s2">&quot;id&quot;</span> <span class="o">-</span><span class="n">o</span> <span class="n">tsv</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>We need this in order to assign the AcrPush role which will allow BinderHub to push images to the registry.
+You can save this to a bash variable like so:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ACR_ID=$(az acr show --name &lt;ACR_NAME&gt; --query &quot;id&quot; -o tsv)
+</pre></div>
+</div>
+<ol class="arabic" start="7">
+<li><p>Create a Service Principal with the AcrPush role assignment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">az</span> <span class="n">ad</span> <span class="n">sp</span> <span class="n">create</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">rbac</span> <span class="o">--</span><span class="n">name</span> <span class="o">&lt;</span><span class="n">SP_NAME</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">role</span> <span class="n">AcrPush</span> <span class="o">--</span><span class="n">scope</span> <span class="o">&lt;</span><span class="n">ACR_ID</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;SP_NAME&gt;</span></code> is a recognisable name for your Service Principal, for example <code class="docutils literal notranslate"><span class="pre">binderhub-sp</span></code>,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;ACR_ID&gt;</span></code> is the AppID we retrieved in step 6 above.
+You can replace this with <code class="docutils literal notranslate"><span class="pre">${ACR_ID}</span></code> if you saved it to a bash variable.</p></li>
+</ul>
+<div class="alert alert-primary">
+<p class="admonition-title">Important</p>
+<p>Note down the AppID and password that are output by this step.
+These are the login credentials BinderHub will use to access the registry.</p>
+<p><strong>The password will not be recoverable after this step, so make sure you keep it safe!</strong></p>
+<p>If you’d like to save this info to bash variables, you can replace step 8 with the following commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>SERVICE_PRINCIPAL_PASSWORD=$(az ad sp create-for-rbac --name &lt;SP_NAME&gt; --role AcrPush --scopes &lt;ACR_ID&gt; --query password --output tsv)
+SERVICE_PRINCIPAL_ID=$(az ad sp show --id http://&lt;SP_NAME&gt; --query appId --output tsv)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="next-step">
+<h2>2.4. Next step<a class="headerlink" href="#next-step" title="Permalink to this headline">¶</a></h2>
+<p>Now that our cloud resources are set up, it’s time to <a class="reference internal" href="setup-binderhub.html"><span class="doc">Set up BinderHub</span></a>.</p>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="create-cloud-resources.html" title="previous page">1. Create your cloud resources</a>
+    <a class='right-next' id="next-link" href="setup-binderhub.html" title="next page">3. Set up BinderHub</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    <footer class="footer">
+  <div class="container">
+    <p>
+          &copy; Copyright 2017, The Jupyter Team.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.0.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

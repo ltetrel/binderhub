@@ -1,0 +1,933 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>app &#8212; BinderHub 0.1.0 documentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="https://gitcdn.link/repo/jupyterhub/binder/master/doc/_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="build" href="build.html" />
+    <link rel="prev" title="Configuration and Source Code Reference" href="ref-index.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/logo.png" class="logo" alt="logo">
+</a>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div id="navbar-menu" class="collapse navbar-collapse">
+  <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+    <li class="nav-item">
+        <a class="nav-link" href="../index.html">Home</a>
+    </li>
+    
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="../zero-to-binderhub/index.html">Zero to BinderHub</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="../customization/index.html">Customization</a>
+    </li>
+    
+    <li class="nav-item active">
+        <a class="nav-link" href="../developer/index.html">Administrators and developers</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="../community/index.html">Community</a>
+    </li>
+    
+    
+  </ul>
+  <ul class="navbar-nav ml-auto">
+    
+    
+  </ul>
+</div>
+    </nav>
+    
+
+    <div class="container-fluid">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="../overview.html">The BinderHub Architecture</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../eventlogging.html">Event Logging</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../api.html">BinderHub API Documentation</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../developer/repoproviders.html">Repository Providers</a>
+              </li>
+          
+        
+          
+
+              <li class="active">
+                  <a href="ref-index.html">Configuration and Source Code Reference</a>
+                  <ul>
+                  
+                      <li class="active">
+                          <a href="">app</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="build.html">build</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="builder.html">builder</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="main.html">main</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="registry.html">registry</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="repoproviders.html">repoproviders</a>
+                      </li>
+                  
+                  </ul>
+              </li>
+          
+        
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+
+
+<div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#module-binderhub.app" class="nav-link">Module: binderhub.app</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#binderhub" class="nav-link">BinderHub</a>
+        </li>
+    
+    </ul>
+</nav>
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="app">
+<h1>app<a class="headerlink" href="#app" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-binderhub.app">
+<span id="module-binderhub-app"></span><h2>Module: <a class="reference internal" href="#module-binderhub.app" title="binderhub.app"><code class="xref py py-mod docutils literal notranslate"><span class="pre">binderhub.app</span></code></a><a class="headerlink" href="#module-binderhub.app" title="Permalink to this headline">¶</a></h2>
+<p>The binderhub application</p>
+</div>
+<div class="section" id="binderhub">
+<h2><a class="reference internal" href="#binderhub.app.BinderHub" title="binderhub.app.BinderHub"><code class="xref py py-class docutils literal notranslate"><span class="pre">BinderHub</span></code></a><a class="headerlink" href="#binderhub" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="binderhub.app.BinderHub">
+<em class="property">class </em><code class="descclassname">binderhub.app.</code><code class="descname">BinderHub</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.app.BinderHub" title="Permalink to this definition">¶</a></dt>
+<dd><p>An Application for starting a builder.</p>
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.about_message = Unicode('')</code></dt>
+<dd><p>Additional message to display on the about page.</p>
+<p>Will be directly inserted into the about page’s source so you can use
+raw HTML.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.appendix = Unicode('')</code></dt>
+<dd><p>Appendix to pass to repo2docker</p>
+<p>A multi-line string of Docker directives to run.
+Since the build context cannot be affected,
+ADD will typically not be useful.</p>
+<p>This should be a Python string template.
+It will be formatted with at least the following names available:</p>
+<ul class="simple">
+<li><p>binder_url: the shareable URL for the current image
+(e.g. for sharing links to the current Binder)</p></li>
+<li><p>repo_url: the repository URL used to build the image</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.auth_enabled = Bool(False)</code></dt>
+<dd><p>If JupyterHub authentication enabled,
+require user to login (don’t create temporary users during launch) and
+start the new server for the logged in user.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.badge_base_url = Union()</code></dt>
+<dd><p>Base URL to use when generating launch badges.
+Can also be a function that is passed the current handler and returns
+the badge base URL, or “” for the default.</p>
+<p>For example, you could get the badge_base_url from a custom HTTP
+header, the Referer header, or from a request parameter</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.banner_message = Unicode('')</code></dt>
+<dd><p>Message to display in a banner on all pages.</p>
+<p>The value will be inserted “as is” into a HTML &lt;div&gt; element
+with grey background, located at the top of the BinderHub pages. Raw
+HTML is supported.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.base_url = Unicode('/')</code></dt>
+<dd><p>The base URL of the entire application</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.build_cleanup_interval = Int(60)</code></dt>
+<dd><p>Interval (in seconds) for how often stopped build pods will be deleted.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.build_docker_host = Unicode('/var/run/docker.sock')</code></dt>
+<dd><p>The docker URL repo2docker should use to build the images.</p>
+<p>Currently, only paths are supported, and they are expected to be available on
+all the hosts.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.build_image = Unicode('jupyter/repo2docker:0.10.0')</code></dt>
+<dd><p>The repo2docker image to be used for doing builds</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.build_max_age = Int(14400)</code></dt>
+<dd><p>Maximum age of builds</p>
+<p>Builds that are still running longer than this
+will be killed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.build_memory_limit = ByteSpecification(0)</code></dt>
+<dd><p>Max amount of memory allocated for each image build process.</p>
+<p>0 sets no limit.</p>
+<p>This is used as both the memory limit &amp; request for the pod
+that is spawned to do the building, even though the pod itself
+will not be using that much memory since the docker building is
+happening outside the pod. However, it makes kubernetes aware of
+the resources being used, and lets it schedule more intelligently.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.build_namespace = Unicode('default')</code></dt>
+<dd><p>Kubernetes namespace to spawn build pods in.</p>
+<p>Note that the push_secret must refer to a secret in this namespace.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.build_node_selector = Dict()</code></dt>
+<dd><p>Select the node where build pod runs on.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.builder_required = Bool(True)</code></dt>
+<dd><p>If binderhub should try to continue to run without a working build infrastructure.</p>
+<p>Build infrastructure is kubernetes cluster + docker. This is useful for pure HTML/CSS/JS local development.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.concurrent_build_limit = Int(32)</code></dt>
+<dd><p>The number of concurrent builds to allow.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.config_file = Unicode('binderhub_config.py')</code></dt>
+<dd><p>Config file to load.</p>
+<p>If a relative path is provided, it is taken relative to current directory</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.debug = Bool(False)</code></dt>
+<dd><p>Turn on debugging.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.executor_threads = Int(5)</code></dt>
+<dd><p>The number of threads to use for blocking calls</p>
+<p>Should generaly be a small number because we don’t
+care about high concurrency here, just not blocking the webserver.
+This executor is not used for long-running tasks (e.g. builds).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.extra_footer_scripts = Dict()</code></dt>
+<dd><p>Extra bits of JavaScript that should be loaded in footer of each page.</p>
+<p>Only the values are set up as scripts. Keys are used only
+for sorting.</p>
+<p>Omit the &lt;script&gt; tag. This should be primarily used for
+analytics code.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.extra_static_path = Unicode('')</code></dt>
+<dd><p>Path to search for extra static files.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.extra_static_url_prefix = Unicode('/extra_static/')</code></dt>
+<dd><p>Url prefix to serve extra static files.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.extra_volume_build = Dict()</code></dt>
+<dd><p>Additionnal volume on build pods.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.extra_volume_mount_build = Dict()</code></dt>
+<dd><p>Additionnal volume mounting configuration on build pods.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.google_analytics_code = Unicode(None)</code></dt>
+<dd><p>The Google Analytics code to use on the main page.</p>
+<p>Note that we’ll respect Do Not Track settings, despite the fact that GA does not.
+We will not load the GA scripts on browsers with DNT enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.google_analytics_domain = Unicode('auto')</code></dt>
+<dd><p>The Google Analytics domain to use on the main page.</p>
+<p>By default this is set to ‘auto’, which sets it up for current domain and all
+subdomains. This can be set to a more restrictive domain here for better privacy</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.hub_api_token = Unicode('')</code></dt>
+<dd><p>API token for talking to the JupyterHub API</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.hub_url = Unicode('')</code></dt>
+<dd><p>The base URL of the JupyterHub instance where users will run.</p>
+<p>e.g. <a class="reference external" href="https://hub.mybinder.org/">https://hub.mybinder.org/</a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.image_prefix = Unicode('')</code></dt>
+<dd><p>Prefix for all built docker images.</p>
+<dl class="simple">
+<dt>If you are pushing to gcr.io, this would start with:</dt><dd><p>gcr.io/&lt;your-project-name&gt;/</p>
+</dd>
+</dl>
+<p>Set according to whatever registry you are pushing to.</p>
+<p>Defaults to “”, which is probably not what you want :)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.init_container_build = Dict()</code></dt>
+<dd><p>Additionnal container on build pods.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.log_datefmt = Unicode('%Y-%m-%d %H:%M:%S')</code></dt>
+<dd><p>The date format used by logging formatters for %(asctime)s</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.log_format = Unicode('[%(name)s]%(highlevel)s %(message)s')</code></dt>
+<dd><p>The Logging format template</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.log_level = Enum(30)</code></dt>
+<dd><p>Set the log level by value or name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.log_tail_lines = Int(100)</code></dt>
+<dd><p>Limit number of log lines to show when connecting to an already running build.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.normalized_origin = Unicode('')</code></dt>
+<dd><p>Origin to use when emitting events. Defaults to hostname of request when empty</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.per_repo_quota = Int(0)</code></dt>
+<dd><p>Maximum number of concurrent users running from a given repo.</p>
+<p>Limits the amount of Binder that can be consumed by a single repo.</p>
+<p>0 (default) means no quotas.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.per_repo_quota_higher = Int(0)</code></dt>
+<dd><p>Maximum number of concurrent users running from a higher-quota repo.</p>
+<p>Limits the amount of Binder that can be consumed by a single repo. This
+quota is a second limit for repos with special status. See the
+<code class="docutils literal notranslate"><span class="pre">high_quota_specs</span></code> parameter of RepoProvider classes for usage.</p>
+<p>0 (default) means no quotas.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.pod_quota = Int(None)</code></dt>
+<dd><p>The number of concurrent pods this hub has been designed to support.</p>
+<p>This quota is used as an indication for how much above or below the
+design capacity a hub is running. It is not used to reject new launch
+requests when usage is above the quota.</p>
+<p>The default corresponds to no quota, 0 means the hub can’t accept pods
+(maybe because it is in maintenance mode), and any positive integer
+sets the quota.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.port = Int(8585)</code></dt>
+<dd><p>Port for the builder to listen on.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.push_secret = Unicode('binder-push-secret')</code></dt>
+<dd><p>A kubernetes secret object that provides credentials for pushing built images.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.repo_providers = Dict()</code></dt>
+<dd><p>List of Repo Providers to register and try</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.sticky_builds = Bool(False)</code></dt>
+<dd><p>Attempt to assign builds for the same repository to the same node.</p>
+<p>In order to speed up re-builds of a repository all its builds will
+be assigned to the same node in the cluster.</p>
+<p>Note: This feature only works if you also enable docker-in-docker support.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.template_path = Unicode('')</code></dt>
+<dd><p>Path to search for custom jinja templates, before using the default templates.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.template_variables = Dict()</code></dt>
+<dd><p>Extra variables to supply to jinja templates when rendering.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.tornado_settings = Dict()</code></dt>
+<dd><p>additional settings to pass through to tornado.</p>
+<p>can include things like additional headers, etc.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.use_registry = Bool(True)</code></dt>
+<dd><p>Set to true to push images to a registry &amp; check for images in registry.</p>
+<p>Set to false to use only local docker images. Useful when running
+in a single node.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.about_message = Unicode('')</code></dt>
+<dd><p>Additional message to display on the about page.</p>
+<p>Will be directly inserted into the about page’s source so you can use
+raw HTML.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="binderhub.app.BinderHub.add_url_prefix">
+<em class="property">static </em><code class="descname">add_url_prefix</code><span class="sig-paren">(</span><em>prefix</em>, <em>handlers</em><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.app.BinderHub.add_url_prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>add a url prefix to handlers</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.appendix = Unicode('')</code></dt>
+<dd><p>Appendix to pass to repo2docker</p>
+<p>A multi-line string of Docker directives to run.
+Since the build context cannot be affected,
+ADD will typically not be useful.</p>
+<p>This should be a Python string template.
+It will be formatted with at least the following names available:</p>
+<ul class="simple">
+<li><p>binder_url: the shareable URL for the current image
+(e.g. for sharing links to the current Binder)</p></li>
+<li><p>repo_url: the repository URL used to build the image</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.auth_enabled = Bool(False)</code></dt>
+<dd><p>If JupyterHub authentication enabled,
+require user to login (don’t create temporary users during launch) and
+start the new server for the logged in user.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.badge_base_url = Union()</code></dt>
+<dd><p>Base URL to use when generating launch badges.
+Can also be a function that is passed the current handler and returns
+the badge base URL, or “” for the default.</p>
+<p>For example, you could get the badge_base_url from a custom HTTP
+header, the Referer header, or from a request parameter</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.banner_message = Unicode('')</code></dt>
+<dd><p>Message to display in a banner on all pages.</p>
+<p>The value will be inserted “as is” into a HTML &lt;div&gt; element
+with grey background, located at the top of the BinderHub pages. Raw
+HTML is supported.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.base_url = Unicode('/')</code></dt>
+<dd><p>The base URL of the entire application</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.build_cleanup_interval = Int(60)</code></dt>
+<dd><p>Interval (in seconds) for how often stopped build pods will be deleted.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.build_docker_host = Unicode('/var/run/docker.sock')</code></dt>
+<dd><p>The docker URL repo2docker should use to build the images.</p>
+<p>Currently, only paths are supported, and they are expected to be available on
+all the hosts.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.build_image = Unicode('jupyter/repo2docker:0.10.0')</code></dt>
+<dd><p>The repo2docker image to be used for doing builds</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.build_max_age = Int(14400)</code></dt>
+<dd><p>Maximum age of builds</p>
+<p>Builds that are still running longer than this
+will be killed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.build_memory_limit = ByteSpecification(0)</code></dt>
+<dd><p>Max amount of memory allocated for each image build process.</p>
+<p>0 sets no limit.</p>
+<p>This is used as both the memory limit &amp; request for the pod
+that is spawned to do the building, even though the pod itself
+will not be using that much memory since the docker building is
+happening outside the pod. However, it makes kubernetes aware of
+the resources being used, and lets it schedule more intelligently.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.build_namespace = Unicode('default')</code></dt>
+<dd><p>Kubernetes namespace to spawn build pods in.</p>
+<p>Note that the push_secret must refer to a secret in this namespace.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.build_node_selector = Dict()</code></dt>
+<dd><p>Select the node where build pod runs on.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.builder_required = Bool(True)</code></dt>
+<dd><p>If binderhub should try to continue to run without a working build infrastructure.</p>
+<p>Build infrastructure is kubernetes cluster + docker. This is useful for pure HTML/CSS/JS local development.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.concurrent_build_limit = Int(32)</code></dt>
+<dd><p>The number of concurrent builds to allow.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.config_file = Unicode('binderhub_config.py')</code></dt>
+<dd><p>Config file to load.</p>
+<p>If a relative path is provided, it is taken relative to current directory</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.debug = Bool(False)</code></dt>
+<dd><p>Turn on debugging.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.executor_threads = Int(5)</code></dt>
+<dd><p>The number of threads to use for blocking calls</p>
+<p>Should generaly be a small number because we don’t
+care about high concurrency here, just not blocking the webserver.
+This executor is not used for long-running tasks (e.g. builds).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.extra_footer_scripts = Dict()</code></dt>
+<dd><p>Extra bits of JavaScript that should be loaded in footer of each page.</p>
+<p>Only the values are set up as scripts. Keys are used only
+for sorting.</p>
+<p>Omit the &lt;script&gt; tag. This should be primarily used for
+analytics code.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.extra_static_path = Unicode('')</code></dt>
+<dd><p>Path to search for extra static files.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.extra_static_url_prefix = Unicode('/extra_static/')</code></dt>
+<dd><p>Url prefix to serve extra static files.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.extra_volume_build = Dict()</code></dt>
+<dd><p>Additionnal volume on build pods.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.extra_volume_mount_build = Dict()</code></dt>
+<dd><p>Additionnal volume mounting configuration on build pods.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.google_analytics_code = Unicode(None)</code></dt>
+<dd><p>The Google Analytics code to use on the main page.</p>
+<p>Note that we’ll respect Do Not Track settings, despite the fact that GA does not.
+We will not load the GA scripts on browsers with DNT enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.google_analytics_domain = Unicode('auto')</code></dt>
+<dd><p>The Google Analytics domain to use on the main page.</p>
+<p>By default this is set to ‘auto’, which sets it up for current domain and all
+subdomains. This can be set to a more restrictive domain here for better privacy</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.hub_api_token = Unicode('')</code></dt>
+<dd><p>API token for talking to the JupyterHub API</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.hub_url = Unicode('')</code></dt>
+<dd><p>The base URL of the JupyterHub instance where users will run.</p>
+<p>e.g. <a class="reference external" href="https://hub.mybinder.org/">https://hub.mybinder.org/</a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.image_prefix = Unicode('')</code></dt>
+<dd><p>Prefix for all built docker images.</p>
+<dl class="simple">
+<dt>If you are pushing to gcr.io, this would start with:</dt><dd><p>gcr.io/&lt;your-project-name&gt;/</p>
+</dd>
+</dl>
+<p>Set according to whatever registry you are pushing to.</p>
+<p>Defaults to “”, which is probably not what you want :)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.init_container_build = Dict()</code></dt>
+<dd><p>Additionnal container on build pods.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.app.BinderHub.initialize">
+<code class="descname">initialize</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.app.BinderHub.initialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load configuration settings.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.log_tail_lines = Int(100)</code></dt>
+<dd><p>Limit number of log lines to show when connecting to an already running build.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.normalized_origin = Unicode('')</code></dt>
+<dd><p>Origin to use when emitting events. Defaults to hostname of request when empty</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.per_repo_quota = Int(0)</code></dt>
+<dd><p>Maximum number of concurrent users running from a given repo.</p>
+<p>Limits the amount of Binder that can be consumed by a single repo.</p>
+<p>0 (default) means no quotas.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.per_repo_quota_higher = Int(0)</code></dt>
+<dd><p>Maximum number of concurrent users running from a higher-quota repo.</p>
+<p>Limits the amount of Binder that can be consumed by a single repo. This
+quota is a second limit for repos with special status. See the
+<code class="docutils literal notranslate"><span class="pre">high_quota_specs</span></code> parameter of RepoProvider classes for usage.</p>
+<p>0 (default) means no quotas.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.pod_quota = Int(None)</code></dt>
+<dd><p>The number of concurrent pods this hub has been designed to support.</p>
+<p>This quota is used as an indication for how much above or below the
+design capacity a hub is running. It is not used to reject new launch
+requests when usage is above the quota.</p>
+<p>The default corresponds to no quota, 0 means the hub can’t accept pods
+(maybe because it is in maintenance mode), and any positive integer
+sets the quota.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.port = Int(8585)</code></dt>
+<dd><p>Port for the builder to listen on.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.push_secret = Unicode('binder-push-secret')</code></dt>
+<dd><p>A kubernetes secret object that provides credentials for pushing built images.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.repo_providers = Dict()</code></dt>
+<dd><p>List of Repo Providers to register and try</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.app.BinderHub.start">
+<code class="descname">start</code><span class="sig-paren">(</span><em>run_loop=True</em><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.app.BinderHub.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start the app mainloop.</p>
+<p>Override in subclasses.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.sticky_builds = Bool(False)</code></dt>
+<dd><p>Attempt to assign builds for the same repository to the same node.</p>
+<p>In order to speed up re-builds of a repository all its builds will
+be assigned to the same node in the cluster.</p>
+<p>Note: This feature only works if you also enable docker-in-docker support.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.template_path = Unicode('')</code></dt>
+<dd><p>Path to search for custom jinja templates, before using the default templates.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.template_variables = Dict()</code></dt>
+<dd><p>Extra variables to supply to jinja templates when rendering.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.tornado_settings = Dict()</code></dt>
+<dd><p>additional settings to pass through to tornado.</p>
+<p>can include things like additional headers, etc.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.BinderHub.use_registry = Bool(True)</code></dt>
+<dd><p>Set to true to push images to a registry &amp; check for images in registry.</p>
+<p>Set to false to use only local docker images. Useful when running
+in a single node.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.app.BinderHub.watch_build_pods">
+<code class="descname">watch_build_pods</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.app.BinderHub.watch_build_pods" title="Permalink to this definition">¶</a></dt>
+<dd><p>Watch build pods</p>
+<p>Every build_cleanup_interval:
+- delete stopped build pods
+- delete running build pods older than build_max_age</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="ref-index.html" title="previous page">Configuration and Source Code Reference</a>
+    <a class='right-next' id="next-link" href="build.html" title="next page">build</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    <footer class="footer">
+  <div class="container">
+    <p>
+          &copy; Copyright 2017, The Jupyter Team.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.0.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

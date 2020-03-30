@@ -1,0 +1,328 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Secure with HTTPS &#8212; BinderHub 0.1.0 documentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="https://gitcdn.link/repo/jupyterhub/binder/master/doc/_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link href="_static/css/index.css" rel="stylesheet">
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Administrators and developers" href="developer/index.html" />
+    <link rel="prev" title="Enabling Authentication" href="authentication.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+
+<a class="navbar-brand" href="index.html">
+  <img src="_static/logo.png" class="logo" alt="logo">
+</a>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div id="navbar-menu" class="collapse navbar-collapse">
+  <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+    <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+    </li>
+    
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="zero-to-binderhub/index.html">Zero to BinderHub</a>
+    </li>
+    
+    <li class="nav-item active">
+        <a class="nav-link" href="customization/index.html">Customization</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="developer/index.html">Administrators and developers</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="community/index.html">Community</a>
+    </li>
+    
+    
+  </ul>
+  <ul class="navbar-nav ml-auto">
+    
+    
+  </ul>
+</div>
+    </nav>
+    
+
+    <div class="container-fluid">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="debug.html">Debugging BinderHub</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="customizing.html">Customizing your BinderHub deployment</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="authentication.html">Enabling Authentication</a>
+              </li>
+          
+        
+          
+              <li class="active">
+                  <a href="">Secure with HTTPS</a>
+              </li>
+          
+        
+      
+      
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+
+
+<div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#setup-ip-domain" class="nav-link">Setup IP & domain</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#cert-manager-for-automatic-tls-certificate-provisioning" class="nav-link">cert-manager for automatic TLS certificate provisioning</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#ingress-proxy-using-nginx" class="nav-link">Ingress proxy using nginx</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#adjust-binderhub-config-to-serve-via-https" class="nav-link">Adjust BinderHub config to serve via HTTPS</a>
+        </li>
+    
+    </ul>
+</nav>
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="secure-with-https">
+<h1>Secure with HTTPS<a class="headerlink" href="#secure-with-https" title="Permalink to this headline">¶</a></h1>
+<p>To enable HTTPS on your BinderHub you can setup an ingress proxy and configure
+it to serve both, the Binder and JupyterHub interface, using TLS. You can
+either manually provide TLS certificates or use
+<a class="reference external" href="https://letsencrypt.org/">Let’s Encrypt</a> to automatically get signed
+certificates.</p>
+<div class="section" id="setup-ip-domain">
+<h2>Setup IP &amp; domain<a class="headerlink" href="#setup-ip-domain" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Get a static IP(v4) address that you will assign to your ingress proxy
+later. For example, on Google Cloud this can be done using
+<code class="docutils literal notranslate"><span class="pre">gcloud</span> <span class="pre">compute</span> <span class="pre">addresses</span> <span class="pre">create</span> <span class="pre">&lt;alias-name-for-ip&gt;</span> <span class="pre">--region</span> <span class="pre">&lt;region&gt;</span></code>
+and retrieve the assigned IP using <code class="docutils literal notranslate"><span class="pre">gcloud</span> <span class="pre">compute</span> <span class="pre">addresses</span> <span class="pre">list</span></code>.</p></li>
+<li><p>Buy a domain name from a registrar. Pick whichever one you want.</p></li>
+<li><p>Set A records to your above retrieved external IP, one for Binder and
+one for JupyterHub. We need two distinct subdomains for the routing to
+the two different services as they will be served by the same ingress proxy.
+We suggest you use <code class="docutils literal notranslate"><span class="pre">hub.binder.</span></code> for JupyterHub and <code class="docutils literal notranslate"><span class="pre">binder.</span></code> for your
+BinderHub. Once you are done your BinderHub will be available at
+<code class="docutils literal notranslate"><span class="pre">https://binder.</span></code>.</p></li>
+<li><p>Wait some minutes for the DNS A records to propagate.</p></li>
+</ol>
+</div>
+<div class="section" id="cert-manager-for-automatic-tls-certificate-provisioning">
+<h2>cert-manager for automatic TLS certificate provisioning<a class="headerlink" href="#cert-manager-for-automatic-tls-certificate-provisioning" title="Permalink to this headline">¶</a></h2>
+<p>To automatically generate TLS certificates and sign them using
+<a class="reference external" href="https://letsencrypt.org/">Let’s Encrypt</a>, we utilise
+<a class="reference external" href="https://github.com/jetstack/cert-manager">cert-manager</a>.
+Installation is done by using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kubectl</span> <span class="n">apply</span> <span class="o">-</span><span class="n">f</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">jetstack</span><span class="o">/</span><span class="n">cert</span><span class="o">-</span><span class="n">manager</span><span class="o">/</span><span class="n">releases</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">v0</span><span class="o">.</span><span class="mf">11.0</span><span class="o">/</span><span class="n">cert</span><span class="o">-</span><span class="n">manager</span><span class="o">.</span><span class="n">yaml</span>
+</pre></div>
+</div>
+<p>For installations of Kubernetes v1.15 or below, you also need to supply
+<code class="docutils literal notranslate"><span class="pre">--validate=false</span></code> to the above command. For more detail on this, see
+the <a class="reference external" href="https://docs.cert-manager.io/en/latest/getting-started/install/kubernetes.html">Getting Started guide</a>.</p>
+<p>We then need to create an issuer that will contact Let’s Encrypt for signing
+our certificates. Use the following template to create a new file
+<code class="docutils literal notranslate"><span class="pre">binderhub-issuer.yaml</span></code> and instantiate it using
+<code class="docutils literal notranslate"><span class="pre">kubectl</span> <span class="pre">apply</span> <span class="pre">-f</span> <span class="pre">binderhub-issuer.yaml</span></code>.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cert-manager.io/v1alpha2</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Issuer</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">letsencrypt-production</span>
+  <span class="nt">namespace</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;same-namespace-as-binderhub&gt;</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">acme</span><span class="p">:</span>
+    <span class="c1"># You must replace this email address with your own.</span>
+    <span class="c1"># Let&#39;s Encrypt will use this to contact you about expiring</span>
+    <span class="c1"># certificates, and issues related to your account.</span>
+    <span class="nt">email</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;your-contact-mail&gt;</span>
+    <span class="nt">server</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://acme-v02.api.letsencrypt.org/directory</span>
+    <span class="nt">privateKeySecretRef</span><span class="p">:</span>
+      <span class="c1"># Secret resource used to store the account&#39;s private key.</span>
+      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">letsencrypt-production</span>
+    <span class="nt">solvers</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">http01</span><span class="p">:</span>
+        <span class="nt">ingress</span><span class="p">:</span>
+          <span class="nt">class</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
+</pre></div>
+</div>
+<p>See the documentation for <a class="reference external" href="https://docs.cert-manager.io/en/latest/tasks/issuers/setup-acme/index.html">more details on configuring the issuer</a>.</p>
+</div>
+<div class="section" id="ingress-proxy-using-nginx">
+<h2>Ingress proxy using nginx<a class="headerlink" href="#ingress-proxy-using-nginx" title="Permalink to this headline">¶</a></h2>
+<p>We will use the <a class="reference external" href="https://github.com/kubernetes/ingress-nginx">nginx ingress controller</a>
+to proxy the TLS connection to our BinderHub setup. This will run using
+the static IP we have acquired before. We therefore create a new configuration
+file <code class="docutils literal notranslate"><span class="pre">nginx-ingress.yaml</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">controller</span><span class="p">:</span>
+  <span class="nt">service</span><span class="p">:</span>
+    <span class="nt">loadBalancerIP</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;STATIC-IP&gt;</span>
+</pre></div>
+</div>
+<p>Afterwards we install the ingress proxy using
+<code class="docutils literal notranslate"><span class="pre">helm</span> <span class="pre">install</span> <span class="pre">stable/nginx-ingress</span> <span class="pre">--name</span> <span class="pre">binderhub-proxy</span> <span class="pre">--namespace</span> <span class="pre">&lt;same-namespace-as-binderhub&gt;</span> <span class="pre">-f</span> <span class="pre">nginx-ingress.yaml</span></code>.
+Then wait until it is ready and showing the correct IP when looking at the output of
+<code class="docutils literal notranslate"><span class="pre">kubectl</span> <span class="pre">--namespace</span> <span class="pre">&lt;same-namespace-as-binderhub&gt;</span> <span class="pre">get</span> <span class="pre">services</span> <span class="pre">binderhub-proxy-nginx-ingress-controller</span></code>.</p>
+</div>
+<div class="section" id="adjust-binderhub-config-to-serve-via-https">
+<h2>Adjust BinderHub config to serve via HTTPS<a class="headerlink" href="#adjust-binderhub-config-to-serve-via-https" title="Permalink to this headline">¶</a></h2>
+<p>With the static IP, DNS records and ingress proxy setup, we can now change our
+BinderHub configuration to serve traffic via HTTPS. Therefore adjust your <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code>
+with the following sections and apply it using <code class="docutils literal notranslate"><span class="pre">helm</span> <span class="pre">upgrade</span> <span class="pre">...</span></code>.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">config</span><span class="p">:</span>
+  <span class="nt">BinderHub</span><span class="p">:</span>
+    <span class="nt">hub_url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://&lt;jupyterhub-URL&gt;</span>
+
+<span class="nt">jupyterhub</span><span class="p">:</span>
+  <span class="nt">ingress</span><span class="p">:</span>
+    <span class="nt">enabled</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+    <span class="nt">hosts</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">&lt;jupyterhub-URL&gt;</span>
+    <span class="nt">annotations</span><span class="p">:</span>
+      <span class="nt">kubernetes.io/ingress.class</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
+      <span class="nt">kubernetes.io/tls-acme</span><span class="p">:</span> <span class="s">&quot;true&quot;</span>
+      <span class="nt">cert-manager.io/issuer</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">letsencrypt-production</span>
+      <span class="nt">https</span><span class="p">:</span>
+        <span class="nt">enabled</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+        <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
+    <span class="nt">tls</span><span class="p">:</span>
+       <span class="p p-Indicator">-</span> <span class="nt">secretName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;jupyterhub-URL-with-dashes-instead-of-dots&gt;-tls</span>
+         <span class="nt">hosts</span><span class="p">:</span>
+          <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">&lt;jupyterhub-URL&gt;</span>
+
+<span class="nt">ingress</span><span class="p">:</span>
+  <span class="nt">enabled</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+  <span class="nt">hosts</span><span class="p">:</span>
+     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">&lt;binderhub-URL&gt;</span>
+  <span class="nt">annotations</span><span class="p">:</span>
+    <span class="nt">kubernetes.io/ingress.class</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
+    <span class="nt">kubernetes.io/tls-acme</span><span class="p">:</span> <span class="s">&quot;true&quot;</span>
+    <span class="nt">cert-manager.io/issuer</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">letsencrypt-production</span>
+    <span class="nt">https</span><span class="p">:</span>
+      <span class="nt">enabled</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+      <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
+  <span class="nt">tls</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">secretName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;binderhub-URL-with-dashes-instead-of-dots&gt;-tls</span>
+      <span class="nt">hosts</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">&lt;binderhub-URL&gt;</span>
+</pre></div>
+</div>
+<p>Once the <code class="docutils literal notranslate"><span class="pre">helm</span> <span class="pre">upgrade</span> <span class="pre">...</span></code> command has been run, it may take up to
+10 minutes until the certificates are issued. You can check their status using
+<code class="docutils literal notranslate"><span class="pre">kubectl</span> <span class="pre">describe</span> <span class="pre">certificate</span> <span class="pre">--namespace</span> <span class="pre">&lt;binderhub-namespace&gt;</span> <span class="pre">&lt;binderhub-URL&gt;-tls</span></code>.</p>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="authentication.html" title="previous page">Enabling Authentication</a>
+    <a class='right-next' id="next-link" href="developer/index.html" title="next page">Administrators and developers</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    <footer class="footer">
+  <div class="container">
+    <p>
+          &copy; Copyright 2017, The Jupyter Team.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.0.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

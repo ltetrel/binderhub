@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Repository Providers &#8212; BinderHub 0.1.0 documentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="https://gitcdn.link/repo/jupyterhub/binder/master/doc/_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Configuration and Source Code Reference" href="../reference/ref-index.html" />
+    <link rel="prev" title="BinderHub API Documentation" href="../api.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/logo.png" class="logo" alt="logo">
+</a>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div id="navbar-menu" class="collapse navbar-collapse">
+  <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+    <li class="nav-item">
+        <a class="nav-link" href="../index.html">Home</a>
+    </li>
+    
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="../zero-to-binderhub/index.html">Zero to BinderHub</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="../customization/index.html">Customization</a>
+    </li>
+    
+    <li class="nav-item active">
+        <a class="nav-link" href="index.html">Administrators and developers</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="../community/index.html">Community</a>
+    </li>
+    
+    
+  </ul>
+  <ul class="navbar-nav ml-auto">
+    
+    
+  </ul>
+</div>
+    </nav>
+    
+
+    <div class="container-fluid">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="../overview.html">The BinderHub Architecture</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../eventlogging.html">Event Logging</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../api.html">BinderHub API Documentation</a>
+              </li>
+          
+        
+          
+              <li class="active">
+                  <a href="">Repository Providers</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../reference/ref-index.html">Configuration and Source Code Reference</a>
+              </li>
+          
+        
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+
+
+<div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#supported-repoproviders" class="nav-link">Supported repoproviders</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#adding-a-new-repository-provider" class="nav-link">Adding a new repository provider</a>
+        </li>
+    
+    </ul>
+</nav>
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="repository-providers">
+<span id="providers-section"></span><h1>Repository Providers<a class="headerlink" href="#repository-providers" title="Permalink to this headline">¶</a></h1>
+<p>Repository Providers (or RepoProviders) are
+locations where repositories are stored (e.g.,
+GitHub). BinderHub supports a number of providers out of the
+box, and can be extended to support new providers. For a complete
+listing of the provider classes, see <a class="reference internal" href="../reference/repoproviders.html#api-repoproviders"><span class="std std-ref">repoproviders</span></a>.</p>
+<div class="section" id="supported-repoproviders">
+<h2>Supported repoproviders<a class="headerlink" href="#supported-repoproviders" title="Permalink to this headline">¶</a></h2>
+<p>Currently supported providers, their prefixes and specs are:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 55%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Provider</p></th>
+<th class="head"><p>provider_prefix</p></th>
+<th class="head"><p>spec</p></th>
+<th class="head"><p>notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GitHub</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gh</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;user&gt;/&lt;repo&gt;/&lt;commit-sha-or-tag-or-branch&gt;</span></code></p></td>
+<td><p><a class="reference external" href="https://github.com/">GitHub</a> is a website for hosting and sharing git repositories.</p></td>
+</tr>
+<tr class="row-odd"><td><p>GitLab</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gl</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;url-escaped-namespace&gt;/&lt;unresolved_ref&gt;</span></code>
+(e.g. <code class="docutils literal notranslate"><span class="pre">group%2Fproject%2Frepo/master</span></code>)</p></td>
+<td><p><a class="reference external" href="https://https://about.gitlab.com/">GitLab</a> offers hosted as well as self-hosted git repositories.</p></td>
+</tr>
+<tr class="row-even"><td><p>Gist</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">gist</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;github-username&gt;/&lt;gist-id&gt;&lt;commit-sha-or-tag&gt;</span></code></p></td>
+<td><p><a class="reference external" href="https://gist.github.com/">Gists</a> are small collections of files stored on GitHub. They behave like lightweight repositories.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Zenodo</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">zenodo</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;zenodo-DOI&gt;</span></code></p></td>
+<td><p><a class="reference external" href="https://zenodo.org/">Zenodo</a> is a non-profit provider of scholarly artifacts (such as code repositories) run in partnership with CERN.</p></td>
+</tr>
+<tr class="row-even"><td><p>Figshare</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">figshare</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;figshare-DOI&gt;</span></code></p></td>
+<td><p><a class="reference external" href="https://figshare.com/">FigShare</a> is company that offers hosting for scholarly artifacts (such as code repositories).</p></td>
+</tr>
+<tr class="row-odd"><td><p>HydroShare</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">hydroshare</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;hydroshare-DOI-or-ResourceID&gt;</span></code></p></td>
+<td><p><a class="reference external" href="https://www.hydroshare.org/">HydroShare</a> hydrologic information system for users to share and publish data and models.</p></td>
+</tr>
+<tr class="row-even"><td><p>Dataverse</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">dataverse</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;dataverse-DOI&gt;</span></code></p></td>
+<td><p><a class="reference external" href="https://dataverse.org/">Dataverse</a> is open source research data repository software installed all over the world.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Git</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">git</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;url-escaped-url&gt;/&lt;commit-sha&gt;</span></code></p></td>
+<td><p>A generic repository provider for URLs that point directly to a git repository.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="adding-a-new-repository-provider">
+<h2>Adding a new repository provider<a class="headerlink" href="#adding-a-new-repository-provider" title="Permalink to this headline">¶</a></h2>
+<p>It is possible to add new repository providers to BinderHub, allowing
+a BinderHub deployment to fetch repositories from new locations
+on the web. Doing so involves defining your own RepoProvider sub-class
+and modifying a set of methods/attributes to interface with the online
+provider to which you are providing access. It also often involves
+<a class="reference external" href="https://github.com/jupyter/repo2docker/tree/master/repo2docker/contentproviders">building a new repo2docker content provider</a>.</p>
+<p>In order to extend the supported repository providers,
+follow these instructions. We’ll provide example links for each step to a
+recent <a class="reference external" href="https://github.com/jupyterhub/binderhub/pull/969">BinderHub pull-request</a>
+that implements the <code class="docutils literal notranslate"><span class="pre">DataverseProvider</span></code> class.</p>
+<ol class="arabic simple">
+<li><p>Review the <a class="reference external" href="https://github.com/jupyterhub/binderhub/blob/master/binderhub/repoproviders.py">repoprovider module</a>.
+This shows a number of example repository providers.</p></li>
+<li><p>Check whether repo2docker has a <a class="reference external" href="https://github.com/jupyter/repo2docker/tree/master/repo2docker/contentproviders">ContentProvider class</a>
+that will work with your repository provider. If not, then you’ll need to create one first.</p></li>
+<li><p>Create a new class that sub-classes the <code class="docutils literal notranslate"><span class="pre">RepoProvider</span></code> class.
+Define your own methods for actions that are repository provider-specific.
+For example, <a class="reference external" href="https://github.com/jupyterhub/binderhub/pull/969/files#diff-c5688934f1e6dc3e932b6c84c1bbbd5dR298">here is the DataverseProvider class</a>.</p></li>
+<li><p>Add this class to the <a class="reference external" href="https://github.com/jupyterhub/binderhub/pull/969/files#diff-a15f2374919ff29de22fa29a192b1fd1R397">list of default RepoProviders in BinderHub</a>.</p></li>
+<li><p>Add the new provider prefix <a class="reference external" href="https://github.com/jupyterhub/binderhub/pull/969/files#diff-29b962b0b049b65a0fed0d8b5dc838b9R58">to the BinderHub UI</a>
+and <a class="reference external" href="https://github.com/jupyterhub/binderhub/pull/969/files#diff-d46aa1f6b1ea4f726708fcc1cd34e994R92">the index javascript</a>
+and make the appropriate changes to the index page based on the URL
+specification for this repository provider.</p></li>
+<li><p>Add <a class="reference external" href="https://github.com/jupyterhub/binderhub/pull/969/files#diff-360740f27b99f96e330327e34440a0e8R102">a test for your repoprovider</a>
+to ensure that it properly resolves and fetches a repository URL.</p></li>
+<li><p>Document your new repository provider on the <a class="reference internal" href="#providers-section"><span class="std std-ref">Repository Providers</span></a> page as well
+as the <a class="reference internal" href="../reference/repoproviders.html#api-repoproviders"><span class="std std-ref">repoproviders</span></a> page.</p></li>
+</ol>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="../api.html" title="previous page">BinderHub API Documentation</a>
+    <a class='right-next' id="next-link" href="../reference/ref-index.html" title="next page">Configuration and Source Code Reference</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    <footer class="footer">
+  <div class="container">
+    <p>
+          &copy; Copyright 2017, The Jupyter Team.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.0.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

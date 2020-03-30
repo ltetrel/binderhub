@@ -1,0 +1,318 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>The BinderHub Federation &#8212; BinderHub 0.1.0 documentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="https://gitcdn.link/repo/jupyterhub/binder/master/doc/_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="BinderHub Deployments" href="../known-deployments.html" />
+    <link rel="prev" title="Community" href="../community/index.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/logo.png" class="logo" alt="logo">
+</a>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div id="navbar-menu" class="collapse navbar-collapse">
+  <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+    <li class="nav-item">
+        <a class="nav-link" href="../index.html">Home</a>
+    </li>
+    
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="../zero-to-binderhub/index.html">Zero to BinderHub</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="../customization/index.html">Customization</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="../developer/index.html">Administrators and developers</a>
+    </li>
+    
+    <li class="nav-item active">
+        <a class="nav-link" href="../community/index.html">Community</a>
+    </li>
+    
+    
+  </ul>
+  <ul class="navbar-nav ml-auto">
+    
+    
+  </ul>
+</div>
+    </nav>
+    
+
+    <div class="container-fluid">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="active">
+                  <a href="">The BinderHub Federation</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../known-deployments.html">BinderHub Deployments</a>
+              </li>
+          
+        
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+
+
+<div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#members-of-the-binderhub-federation" class="nav-link">Members of the BinderHub Federation</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#joining-the-binderhub-federation" class="nav-link">Joining the BinderHub Federation</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#things-to-consider-when-deciding-to-join-the-binder-federation" class="nav-link">Things to consider when deciding to join the Binder federation</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#how-to-join-the-binderhub-federation" class="nav-link">How to join the BinderHub Federation</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#the-binderhub-federation-faq" class="nav-link">The BinderHub Federation FAQ</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#can-i-deploy-a-binderhub-both-for-the-federation-and-for-my-own-community" class="nav-link">Can I deploy a BinderHub both for the federation and for my own community?</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#who-is-currently-in-the-binderhub-federation" class="nav-link">Who is currently in the BinderHub federation?</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#does-the-binderhub-federation-share-docker-images" class="nav-link">Does the BinderHub federation share Docker images?</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="the-binderhub-federation">
+<span id="federation-federation"></span><h1>The BinderHub Federation<a class="headerlink" href="#the-binderhub-federation" title="Permalink to this headline">¶</a></h1>
+<p>While it may seem like <code class="docutils literal notranslate"><span class="pre">mybinder.org</span></code> is a single website, it is
+in fact a <strong>federation</strong> of teams that deploy public BinderHubs to serve
+the community. This page lists the BinderHubs that currently help
+power <code class="docutils literal notranslate"><span class="pre">mybinder.org</span></code>.</p>
+<p>Visiting <code class="docutils literal notranslate"><span class="pre">mybinder.org</span></code> will randomly redirect you to one
+of the following BinderHubs.</p>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>If your organization is interested in becoming part of the BinderHub
+federation, check out <a class="reference internal" href="#federation-joining"><span class="std std-ref">Joining the BinderHub Federation</span></a>.</p>
+</div>
+<div class="section" id="members-of-the-binderhub-federation">
+<span id="federation-federation-list"></span><h2>Members of the BinderHub Federation<a class="headerlink" href="#members-of-the-binderhub-federation" title="Permalink to this headline">¶</a></h2>
+<p>Here is a list of the current members of the BinderHub federation:</p>
+<table class="docutils binderhubs">
+<tr class="row-even">
+<td align="center" class="contrib_entry"><a href="https://gke.mybinder.org"><img src="https://binderhub.readthedocs.io/en/latest/_static/logo.png" class="fed_logo" alt="The Binder Team" /></a><br /><p class="name">gke.mybinder.org</p><br /><p class="name">Run by</p><p class="name"><b><a href=https://jupyterhub-team-compass.readthedocs.io/en/latest/team.html#binder-team>The Binder Team</a></b></p><br /><a href=https://cloud.google.com/><p class="name">Funded by</p><p class="name"><b>Google Cloud Platform</b></p>
+<td align="center" class="contrib_entry"><a href="https://ovh.mybinder.org"><img src="https://www.ovh.com/fr/images/logos/logo-ovh-twitter.jpg" class="fed_logo" alt="The OVH Team" /></a><br /><p class="name">ovh.mybinder.org</p><br /><p class="name">Run by</p><p class="name"><b><a href=https://www.ovh.com/world/>The OVH Team</a></b></p><br /><a href=https://www.ovh.com/world/><p class="name">Funded by</p><p class="name"><b>OVH</b></p>
+<td align="center" class="contrib_entry"><a href="https://gesis.mybinder.org"><img src="https://notebooks.gesis.org/static/images/logo/logo_big_square_transparent.png" class="fed_logo" alt="The GESIS Notebooks Team" /></a><br /><p class="name">gesis.mybinder.org</p><br /><p class="name">Run by</p><p class="name"><b><a href=https://notebooks.gesis.org/about/>The GESIS Notebooks Team</a></b></p><br /><a href=https://www.gesis.org/en/home><p class="name">Funded by</p><p class="name"><b>GESIS</b></p>
+<td align="center" class="contrib_entry"><a href="https://turing.mybinder.org"><img src="https://www.turing.ac.uk/sites/default/files/inline-images/Turing%20logo_0.png" class="fed_logo" alt="The Turing Way team led by Sarah Gibson" /></a><br /><p class="name">turing.mybinder.org</p><br /><p class="name">Run by</p><p class="name"><b><a href=https://www.turing.ac.uk/research/research-projects/turing-way-handbook-reproducible-data-science#organisers>The Turing Way team led by Sarah Gibson</a></b></p><br /><a href=https://turing.ac.uk><p class="name">Funded by</p><p class="name"><b>The Alan Turing Institute</b></p>
+</table></div>
+<div class="section" id="joining-the-binderhub-federation">
+<span id="federation-joining"></span><h2>Joining the BinderHub Federation<a class="headerlink" href="#joining-the-binderhub-federation" title="Permalink to this headline">¶</a></h2>
+<p>Behind <code class="docutils literal notranslate"><span class="pre">mybinder.org</span></code> is a <strong>federation of BinderHubs</strong>. This means that there
+are several independent hubs that each serve a fraction of the traffic
+created by people clicking links pointing to <code class="docutils literal notranslate"><span class="pre">mybinder.org</span></code>. Anyone
+(a company, university or individual) is welcome to deploy a BinderHub
+that forms part of the federation.</p>
+<p>Adding a new BinderHub to the federation requires a mix of two kinds of
+resources: compute and human power to operate the hub. The two extremes
+of this mixture are:</p>
+<ul class="simple">
+<li><p>You donate compute power that the <code class="docutils literal notranslate"><span class="pre">mybinder.org</span></code> team
+<strong>has full control over</strong>, which means you don’t have to be involved in day to
+day operations</p></li>
+<li><p>You donate compute power over which the <code class="docutils literal notranslate"><span class="pre">mybinder.org</span></code> team <strong>does not</strong>
+have full control which means you are also responsible for day to day
+operations of the BinderHub.</p></li>
+</ul>
+<div class="section" id="things-to-consider-when-deciding-to-join-the-binder-federation">
+<span id="federation-things-to-consider"></span><h3>Things to consider when deciding to join the Binder federation<a class="headerlink" href="#things-to-consider-when-deciding-to-join-the-binder-federation" title="Permalink to this headline">¶</a></h3>
+<p>If you’re interested in joining the federation of BinderHubs, consider the
+following questions:</p>
+<ol class="arabic simple">
+<li><p><strong>How much time will this take?</strong> Answering this question depends largely
+on how comfortable you are deploying and maintaining your own BinderHub.
+If you are fairly comfortable, it won’t take much time. Otherwise, it may
+be a good idea to gain some experience in running a BinderHub first -
+perhaps by helping with the <code class="docutils literal notranslate"><span class="pre">mybinder.org</span></code> deployment!</p></li>
+<li><p><strong>Is there any kind of service agreement?</strong> Not really. We expect that
+any member of the BinderHub federation will be committed to keeping their
+BinderHub running with a reasonable uptime, but we don’t have any legal
+framework to enforce this. Use your best judgment when deciding if you’d
+like to join the BinderHub federation - if you can confidently say your
+BinderHub will be up the large majority of the time, then that’s fine.</p></li>
+<li><p><strong>What kind of cloud resources would I need?</strong> This depends on how many
+you have :-)  We can increase or decrease the percentage of <code class="docutils literal notranslate"><span class="pre">mybinder.org</span></code>
+traffic that goes to your BinderHub based on what you can handle.</p></li>
+<li><p><strong>I’m still interested, what should I do next to join?</strong> If you’d still
+like to join the BinderHub federation, see <a class="reference internal" href="#federation-how-to-join"><span class="std std-ref">How to join the BinderHub Federation</span></a>.</p></li>
+</ol>
+</div>
+<div class="section" id="how-to-join-the-binderhub-federation">
+<span id="federation-how-to-join"></span><h3>How to join the BinderHub Federation<a class="headerlink" href="#how-to-join-the-binderhub-federation" title="Permalink to this headline">¶</a></h3>
+<p>If you’ve read through <a class="reference internal" href="#federation-things-to-consider"><span class="std std-ref">Things to consider when deciding to join the Binder federation</span></a> and would
+like to join the BinderHub federation, please reach out to the
+Binder team by opening an issue at <a class="reference external" href="https://github.com/jupyterhub/mybinder.org-deploy">the mybinder.org repository</a>.
+Mention that you’d like to join the federation, what kind of computational
+resources you have, and what kind of human resources you have for maintaining
+the BinderHub deployment.</p>
+<p>The next step is for you to tell us where your BinderHub lives. We’ll assign
+a sub-domain of <code class="docutils literal notranslate"><span class="pre">mybinder.org</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">ovh.mybinder.org</span></code>) that points to
+your BinderHub. Finally, we’ll change the routing configuration so that
+some percentage of traffic to <code class="docutils literal notranslate"><span class="pre">mybinder.org</span></code> is directed to your BinderHub!
+The last step is to tell everybody how awesome you are, and to add your
+deployment to <a class="reference internal" href="#federation-federation-list"><span class="std std-ref">Members of the BinderHub Federation</span></a> page.</p>
+</div>
+</div>
+<div class="section" id="the-binderhub-federation-faq">
+<span id="federation-faq"></span><h2>The BinderHub Federation FAQ<a class="headerlink" href="#the-binderhub-federation-faq" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="can-i-deploy-a-binderhub-both-for-the-federation-and-for-my-own-community">
+<h3>Can I deploy a BinderHub <em>both</em> for the federation and for my own community?<a class="headerlink" href="#can-i-deploy-a-binderhub-both-for-the-federation-and-for-my-own-community" title="Permalink to this headline">¶</a></h3>
+<p>Yes! BinderHub can be deployed either as a public service (such as at mybinder.org),
+or for a more restricted community. Serving a smaller community means you can
+expose users to more resources or allow access to privileged data.</p>
+<p>If you’d like to both serve a more specific population of users <em>and</em> support the
+public mybinder.org federation, we recommend running two BinderHubs in parallel
+with one another. You can do this on the same Kubernets cluster if you wish, and
+you’d configure each BinderHub according to the resources and access that you
+want to provide.</p>
+</div>
+<div class="section" id="who-is-currently-in-the-binderhub-federation">
+<h3>Who is currently in the BinderHub federation?<a class="headerlink" href="#who-is-currently-in-the-binderhub-federation" title="Permalink to this headline">¶</a></h3>
+<p>The current list of BinderHubs that are contributing to mybinder.org can be
+found at <a class="reference internal" href="#federation-federation-list"><span class="std std-ref">Members of the BinderHub Federation</span></a>.</p>
+</div>
+<div class="section" id="does-the-binderhub-federation-share-docker-images">
+<h3>Does the BinderHub federation share Docker images?<a class="headerlink" href="#does-the-binderhub-federation-share-docker-images" title="Permalink to this headline">¶</a></h3>
+<p>Currently, the federation does <em>not</em> share Docker images for repositories.
+This means that you might have to build your repository a few times (one for
+each BinderHub that serves your images). We know that this adds some extra
+waiting for many folks, and if you have any suggestions for how we can speed
+up this process please <a class="reference external" href="https://github.com/jupyterhub/binderhub">open an issue</a>
+in the BinderHub repository!</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="../community/index.html" title="previous page">Community</a>
+    <a class='right-next' id="next-link" href="../known-deployments.html" title="next page">BinderHub Deployments</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    <footer class="footer">
+  <div class="container">
+    <p>
+          &copy; Copyright 2017, The Jupyter Team.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.0.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

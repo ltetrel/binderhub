@@ -1,0 +1,349 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>1. Create your cloud resources &#8212; BinderHub 0.1.0 documentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="https://gitcdn.link/repo/jupyterhub/binder/master/doc/_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link href="_static/css/index.css" rel="stylesheet">
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. Set up the container registry" href="setup-registry.html" />
+    <link rel="prev" title="Zero to BinderHub" href="zero-to-binderhub/index.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+
+<a class="navbar-brand" href="index.html">
+  <img src="_static/logo.png" class="logo" alt="logo">
+</a>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div id="navbar-menu" class="collapse navbar-collapse">
+  <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+    <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+    </li>
+    
+    
+    <li class="nav-item active">
+        <a class="nav-link" href="zero-to-binderhub/index.html">Zero to BinderHub</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="customization/index.html">Customization</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="developer/index.html">Administrators and developers</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="community/index.html">Community</a>
+    </li>
+    
+    
+  </ul>
+  <ul class="navbar-nav ml-auto">
+    
+    
+  </ul>
+</div>
+    </nav>
+    
+
+    <div class="container-fluid">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+        
+          
+              <li class="active">
+                  <a href="">Create your cloud resources</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="setup-registry.html">Set up the container registry</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="setup-binderhub.html">Set up BinderHub</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="turn-off.html">Tear down your Binder deployment</a>
+              </li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+
+
+<div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#setting-up-kubernetes-on-google-cloud" class="nav-link">Setting up Kubernetes on Google Cloud</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#install-helm" class="nav-link">Install Helm</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#installation" class="nav-link">Installation</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#initialization" class="nav-link">Initialization</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#secure-helm" class="nav-link">Secure Helm</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#verify" class="nav-link">Verify</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="create-your-cloud-resources">
+<span id="create-cluster"></span><h1>1. Create your cloud resources<a class="headerlink" href="#create-your-cloud-resources" title="Permalink to this headline">¶</a></h1>
+<p>BinderHub is built to run on top of Kubernetes, a distributed cluster manager.
+It uses a JupyterHub to launch/manage user servers, as well as a
+docker registry to cache images.</p>
+<p>To create your own BinderHub, you’ll first need to set up a properly
+configured Kubernetes Cluster on the cloud, and then configure the
+various components correctly. The following instructions will assist you
+in doing so.</p>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>BinderHub uses a JupyterHub running on Kubernetes for much of its functionality.
+For information on setting up and customizing your JupyterHub, we recommend reading
+the <a class="reference external" href="https://zero-to-jupyterhub.readthedocs.io/en/latest/index.html#customization-guide">Zero to JupyterHub Guide</a>.</p>
+</div>
+<div class="section" id="setting-up-kubernetes-on-google-cloud">
+<h2>1.1. Setting up Kubernetes on <a class="reference external" href="https://cloud.google.com/">Google Cloud</a><a class="headerlink" href="#setting-up-kubernetes-on-google-cloud" title="Permalink to this headline">¶</a></h2>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>BinderHub is built to be cloud agnostic, and can run on various cloud
+providers (as well as bare metal). However, here we only provide
+instructions for Google Cloud as it has been the most extensively-tested.
+If you would like to help with adding instructions for other cloud
+providers, <a class="reference external" href="https://github.com/jupyterhub/binderhub/issues">please contact us</a>!</p>
+</div>
+<p>First, install Kubernetes by following the
+<a class="reference external" href="https://zero-to-jupyterhub.readthedocs.io/en/latest/google/step-zero-gcp.html">instructions in the Zero to JupyterHub guide</a>.
+When you’re done, move on to the next section.</p>
+</div>
+<div class="section" id="install-helm">
+<h2>1.2. Install Helm<a class="headerlink" href="#install-helm" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://helm.sh/">Helm</a>, the package manager for Kubernetes, is a useful tool
+for: installing, upgrading and managing applications on a Kubernetes cluster.
+Helm packages are called <em>charts</em>.
+We will be installing and managing JupyterHub on
+our Kubernetes cluster using a Helm chart.</p>
+<p>Charts are abstractions describing how to install packages onto a Kubernetes
+cluster. When a chart is deployed, it works as a templating engine to populate
+multiple <code class="docutils literal notranslate"><span class="pre">yaml</span></code> files for package dependencies with the required variables, and
+then runs <code class="docutils literal notranslate"><span class="pre">kubectl</span> <span class="pre">apply</span></code> to apply the configuration to the resource and install
+the package.</p>
+<p>Helm has two parts: a client (<code class="docutils literal notranslate"><span class="pre">helm</span></code>) and a server (<code class="docutils literal notranslate"><span class="pre">tiller</span></code>). Tiller runs
+inside of your Kubernetes cluster as a pod in the kube-system namespace. Tiller
+manages both, the <em>releases</em> (installations) and <em>revisions</em> (versions) of charts deployed
+on the cluster. When you run <code class="docutils literal notranslate"><span class="pre">helm</span></code> commands, your local Helm client sends
+instructions to <code class="docutils literal notranslate"><span class="pre">tiller</span></code> in the cluster that in turn make the requested changes.</p>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>These instructions are for Helm 2.
+Helm 3 includes several major breaking changes and is not yet officially
+supported, but <span class="xref std std-doc">preliminary instructions are available for testing</span>.</p>
+</div>
+<div class="section" id="installation">
+<h3>1.2.1. Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h3>
+<p>While several <a class="reference external" href="https://github.com/helm/helm/blob/master/docs/install.md">methods to install Helm</a> exists, the
+simplest way to install Helm is to run Helm’s installer script in a terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get <span class="p">|</span> bash
+</pre></div>
+</div>
+</div>
+<div class="section" id="initialization">
+<span id="helm-rbac"></span><h3>1.2.2. Initialization<a class="headerlink" href="#initialization" title="Permalink to this headline">¶</a></h3>
+<p>After installing helm on your machine, initialize Helm on your Kubernetes
+cluster:</p>
+<ol class="arabic">
+<li><p>Set up a <a class="reference external" href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/">ServiceAccount</a>
+for use by <code class="docutils literal notranslate"><span class="pre">tiller</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl --namespace kube-system create serviceaccount tiller
+</pre></div>
+</div>
+</li>
+<li><p>Give the <code class="docutils literal notranslate"><span class="pre">ServiceAccount</span></code> full permissions to manage the cluster.</p>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>If you know your kubernetes cluster does not have RBAC enabled, you <strong>must</strong> skip this step.
+Most users can ignore this note.</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount<span class="o">=</span>kube-system:tiller
+</pre></div>
+</div>
+<p>See <a class="reference external" href="../administrator/security.html#use-role-based-access-control-rbac">our RBAC documentation</a> for more information.</p>
+</li>
+<li><p>Initialize <code class="docutils literal notranslate"><span class="pre">helm</span></code> and <code class="docutils literal notranslate"><span class="pre">tiller</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>helm init --service-account tiller --history-max <span class="m">100</span> --wait
+</pre></div>
+</div>
+<p>This command only needs to run once per Kubernetes cluster, it will create a
+<code class="docutils literal notranslate"><span class="pre">tiller</span></code> deployment in the kube-system namespace and setup your local <code class="docutils literal notranslate"><span class="pre">helm</span></code>
+client.
+This command installs and configures the <code class="docutils literal notranslate"><span class="pre">tiller</span></code> part of Helm (the whole
+project, not the CLI) on the remote kubernetes cluster. Later when you want
+to deploy changes with <code class="docutils literal notranslate"><span class="pre">helm</span></code> (the local CLI), it will talk to <code class="docutils literal notranslate"><span class="pre">tiller</span></code>
+and tell it what to do. <code class="docutils literal notranslate"><span class="pre">tiller</span></code> then executes these instructions from
+within the cluster.
+We limit the history to 100 previous installs as very long histories slow
+down helm commands a lot.</p>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>If you wish to install <code class="docutils literal notranslate"><span class="pre">helm</span></code> on another computer, you won’t need to setup
+<code class="docutils literal notranslate"><span class="pre">tiller</span></code> again but you still need to initialize <code class="docutils literal notranslate"><span class="pre">helm</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>helm init --client-only
+</pre></div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="secure-helm">
+<h3>1.2.3. Secure Helm<a class="headerlink" href="#secure-helm" title="Permalink to this headline">¶</a></h3>
+<p>Ensure that <code class="docutils literal notranslate"><span class="pre">tiller</span></code> is secure from access inside the cluster:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kubectl patch deployment tiller-deploy --namespace<span class="o">=</span>kube-system --type<span class="o">=</span>json --patch<span class="o">=</span><span class="s1">&#39;[{&quot;op&quot;: &quot;add&quot;, &quot;path&quot;: &quot;/spec/template/spec/containers/0/command&quot;, &quot;value&quot;: [&quot;/tiller&quot;, &quot;--listen=localhost:44134&quot;]}]&#39;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">tiller</span></code> s port is exposed in the cluster without authentication and if you probe
+this port directly (i.e. by bypassing <code class="docutils literal notranslate"><span class="pre">helm</span></code>) then <code class="docutils literal notranslate"><span class="pre">tiller</span></code> s permissions can be
+exploited. This step forces <code class="docutils literal notranslate"><span class="pre">tiller</span></code> to listen to commands from localhost (i.e.
+<code class="docutils literal notranslate"><span class="pre">helm</span></code>) <em>only</em> so that e.g. other pods inside the cluster cannot ask <code class="docutils literal notranslate"><span class="pre">tiller</span></code> to
+install a new chart granting them arbitrary, elevated RBAC privileges and exploit
+them. <a class="reference external" href="https://engineering.bitnami.com/articles/helm-security.html">More details here.</a></p>
+</div>
+<div class="section" id="verify">
+<h3>1.2.4. Verify<a class="headerlink" href="#verify" title="Permalink to this headline">¶</a></h3>
+<p>You can verify that you have the correct version and that it installed properly
+by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>helm version
+</pre></div>
+</div>
+<p>It should in less then a minute, when <code class="docutils literal notranslate"><span class="pre">tiller</span></code> on the cluster is ready, be able
+to provide output like below. Make sure you have at least version 2.11.0 and that
+the client (<code class="docutils literal notranslate"><span class="pre">helm</span></code>) and server version (<code class="docutils literal notranslate"><span class="pre">tiller</span></code>) is matching!</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Client: <span class="p">&amp;</span>version.Version<span class="o">{</span>SemVer:<span class="s2">&quot;v2.11.0&quot;</span>, GitCommit:<span class="s2">&quot;2e55dbe1fdb5fdb96b75ff144a339489417b146b&quot;</span>, GitTreeState:<span class="s2">&quot;clean&quot;</span><span class="o">}</span>
+Server: <span class="p">&amp;</span>version.Version<span class="o">{</span>SemVer:<span class="s2">&quot;v2.11.0&quot;</span>, GitCommit:<span class="s2">&quot;2e55dbe1fdb5fdb96b75ff144a339489417b146b&quot;</span>, GitTreeState:<span class="s2">&quot;clean&quot;</span><span class="o">}</span>
+</pre></div>
+</div>
+<p>Now that you’ve installed Kubernetes and Helm, it’s time to <a class="reference internal" href="setup-registry.html#setup-registry"><span class="std std-ref">Set up the container registry</span></a>.</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="zero-to-binderhub/index.html" title="previous page">Zero to BinderHub</a>
+    <a class='right-next' id="next-link" href="setup-registry.html" title="next page">2. Set up the container registry</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    <footer class="footer">
+  <div class="container">
+    <p>
+          &copy; Copyright 2017, The Jupyter Team.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.0.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

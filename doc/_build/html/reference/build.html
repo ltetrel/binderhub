@@ -1,0 +1,314 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>build &#8212; BinderHub 0.1.0 documentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="https://gitcdn.link/repo/jupyterhub/binder/master/doc/_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="builder" href="builder.html" />
+    <link rel="prev" title="app" href="app.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/logo.png" class="logo" alt="logo">
+</a>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div id="navbar-menu" class="collapse navbar-collapse">
+  <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+    <li class="nav-item">
+        <a class="nav-link" href="../index.html">Home</a>
+    </li>
+    
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="../zero-to-binderhub/index.html">Zero to BinderHub</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="../customization/index.html">Customization</a>
+    </li>
+    
+    <li class="nav-item active">
+        <a class="nav-link" href="../developer/index.html">Administrators and developers</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="../community/index.html">Community</a>
+    </li>
+    
+    
+  </ul>
+  <ul class="navbar-nav ml-auto">
+    
+    
+  </ul>
+</div>
+    </nav>
+    
+
+    <div class="container-fluid">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="../overview.html">The BinderHub Architecture</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../eventlogging.html">Event Logging</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../api.html">BinderHub API Documentation</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../developer/repoproviders.html">Repository Providers</a>
+              </li>
+          
+        
+          
+
+              <li class="active">
+                  <a href="ref-index.html">Configuration and Source Code Reference</a>
+                  <ul>
+                  
+                      <li class="">
+                          <a href="app.html">app</a>
+                      </li>
+                  
+                      <li class="active">
+                          <a href="">build</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="builder.html">builder</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="main.html">main</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="registry.html">registry</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="repoproviders.html">repoproviders</a>
+                      </li>
+                  
+                  </ul>
+              </li>
+          
+        
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+
+
+<div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#module-binderhub.build" class="nav-link">Module: binderhub.build</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#id1" class="nav-link">Build</a>
+        </li>
+    
+    </ul>
+</nav>
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="build">
+<h1>build<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-binderhub.build">
+<span id="module-binderhub-build"></span><h2>Module: <a class="reference internal" href="#module-binderhub.build" title="binderhub.build"><code class="xref py py-mod docutils literal notranslate"><span class="pre">binderhub.build</span></code></a><a class="headerlink" href="#module-binderhub.build" title="Permalink to this headline">¶</a></h2>
+<p>Contains build of a docker image from a git repository.</p>
+</div>
+<div class="section" id="id1">
+<h2><a class="reference internal" href="#binderhub.build.Build" title="binderhub.build.Build"><code class="xref py py-class docutils literal notranslate"><span class="pre">Build</span></code></a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="binderhub.build.Build">
+<em class="property">class </em><code class="descclassname">binderhub.build.</code><code class="descname">Build</code><span class="sig-paren">(</span><em>q</em>, <em>api</em>, <em>name</em>, <em>namespace</em>, <em>repo_url</em>, <em>ref</em>, <em>git_credentials</em>, <em>build_image</em>, <em>image_name</em>, <em>push_secret</em>, <em>memory_limit</em>, <em>docker_host</em>, <em>node_selector</em>, <em>extra_volume_build={}</em>, <em>extra_volume_mount_build={}</em>, <em>init_container_build={}</em>, <em>appendix=''</em>, <em>log_tail_lines=100</em>, <em>sticky_builds=False</em><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.build.Build" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents a build of a git repository into a docker image.</p>
+<p>This ultimately maps to a single pod on a kubernetes cluster. Many
+different build objects can point to this single pod and perform
+operations on the pod. The code in this class needs to be careful and take
+this into account.</p>
+<p>For example, operations a Build object tries might not succeed because
+another Build object pointing to the same pod might have done something
+else. This should be handled gracefully, and the build object should
+reflect the state of the pod as quickly as possible.</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">name</span></code></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">name</span></code> should be unique and immutable since it is used to
+sync to the pod. The <code class="docutils literal notranslate"><span class="pre">name</span></code> should be unique for a
+<code class="docutils literal notranslate"><span class="pre">(repo_url,</span> <span class="pre">ref)</span></code> tuple, and the same tuple should correspond
+to the same <code class="docutils literal notranslate"><span class="pre">name</span></code>. This allows use of the locking provided by k8s
+API instead of having to invent our own locking code.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="binderhub.build.Build.cleanup">
+<code class="descname">cleanup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.build.Build.cleanup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete a kubernetes pod.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="binderhub.build.Build.cleanup_builds">
+<em class="property">classmethod </em><code class="descname">cleanup_builds</code><span class="sig-paren">(</span><em>kube</em>, <em>namespace</em>, <em>max_age</em><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.build.Build.cleanup_builds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete stopped build pods and build pods that have aged out</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.build.Build.get_affinity">
+<code class="descname">get_affinity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.build.Build.get_affinity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine the affinity term for the build pod.</p>
+<p>There are a two affinity strategies, which one is used depends on how
+the BinderHub is configured.</p>
+<p>In the default setup the affinity of each build pod is an “anti-affinity”
+which causes the pods to prefer to schedule on separate nodes.</p>
+<p>In a setup with docker-in-docker enabled pods for a particular
+repository prefer to schedule on the same node in order to reuse the
+docker layer cache of previous builds.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.build.Build.get_cmd">
+<code class="descname">get_cmd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.build.Build.get_cmd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the cmd to run to build the image</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.build.Build.progress">
+<code class="descname">progress</code><span class="sig-paren">(</span><em>kind</em>, <em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.build.Build.progress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Put the current action item into the queue for execution.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.build.Build.stop">
+<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.build.Build.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop watching a build</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.build.Build.stream_logs">
+<code class="descname">stream_logs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.build.Build.stream_logs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stream a pod’s logs</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.build.Build.submit">
+<code class="descname">submit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.build.Build.submit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Submit a build pod to create the image for the repository.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="app.html" title="previous page">app</a>
+    <a class='right-next' id="next-link" href="builder.html" title="next page">builder</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    <footer class="footer">
+  <div class="container">
+    <p>
+          &copy; Copyright 2017, The Jupyter Team.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.0.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

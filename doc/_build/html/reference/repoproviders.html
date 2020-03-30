@@ -1,0 +1,1144 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>repoproviders &#8212; BinderHub 0.1.0 documentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="https://gitcdn.link/repo/jupyterhub/binder/master/doc/_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link href="../_static/css/index.css" rel="stylesheet">
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Community" href="../community/index.html" />
+    <link rel="prev" title="registry" href="registry.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+
+<a class="navbar-brand" href="../index.html">
+  <img src="../_static/logo.png" class="logo" alt="logo">
+</a>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div id="navbar-menu" class="collapse navbar-collapse">
+  <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+    <li class="nav-item">
+        <a class="nav-link" href="../index.html">Home</a>
+    </li>
+    
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="../zero-to-binderhub/index.html">Zero to BinderHub</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="../customization/index.html">Customization</a>
+    </li>
+    
+    <li class="nav-item active">
+        <a class="nav-link" href="../developer/index.html">Administrators and developers</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="../community/index.html">Community</a>
+    </li>
+    
+    
+  </ul>
+  <ul class="navbar-nav ml-auto">
+    
+    
+  </ul>
+</div>
+    </nav>
+    
+
+    <div class="container-fluid">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="../overview.html">The BinderHub Architecture</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../eventlogging.html">Event Logging</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../api.html">BinderHub API Documentation</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="../developer/repoproviders.html">Repository Providers</a>
+              </li>
+          
+        
+          
+
+              <li class="active">
+                  <a href="ref-index.html">Configuration and Source Code Reference</a>
+                  <ul>
+                  
+                      <li class="">
+                          <a href="app.html">app</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="build.html">build</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="builder.html">builder</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="main.html">main</a>
+                      </li>
+                  
+                      <li class="">
+                          <a href="registry.html">registry</a>
+                      </li>
+                  
+                      <li class="active">
+                          <a href="">repoproviders</a>
+                      </li>
+                  
+                  </ul>
+              </li>
+          
+        
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+
+
+<div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#module-binderhub.repoproviders" class="nav-link">Module: binderhub.repoproviders</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#repoprovider" class="nav-link">RepoProvider</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#githubrepoprovider" class="nav-link">GitHubRepoProvider</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#gitlabrepoprovider" class="nav-link">GitLabRepoProvider</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#gistrepoprovider" class="nav-link">GistRepoProvider</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#zenodoprovider" class="nav-link">ZenodoProvider</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#figshareprovider" class="nav-link">FigshareProvider</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#hydroshareprovider" class="nav-link">HydroshareProvider</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#dataverseprovider" class="nav-link">DataverseProvider</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#gitrepoprovider" class="nav-link">GitRepoProvider</a>
+        </li>
+    
+    </ul>
+</nav>
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="repoproviders">
+<span id="api-repoproviders"></span><h1>repoproviders<a class="headerlink" href="#repoproviders" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-binderhub.repoproviders">
+<span id="module-binderhub-repoproviders"></span><h2>Module: <a class="reference internal" href="#module-binderhub.repoproviders" title="binderhub.repoproviders"><code class="xref py py-mod docutils literal notranslate"><span class="pre">binderhub.repoproviders</span></code></a><a class="headerlink" href="#module-binderhub.repoproviders" title="Permalink to this headline">¶</a></h2>
+<p>Classes for Repo providers.</p>
+<p>Subclass the base class, <code class="docutils literal notranslate"><span class="pre">RepoProvider</span></code>, to support different version
+control services and providers.</p>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>When adding a new repo provider, add it to the allowed values for
+repo providers in event-schemas/launch.json.</p>
+</div>
+</div>
+<div class="section" id="repoprovider">
+<h2><a class="reference internal" href="#binderhub.repoproviders.RepoProvider" title="binderhub.repoproviders.RepoProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">RepoProvider</span></code></a><a class="headerlink" href="#repoprovider" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="binderhub.repoproviders.RepoProvider">
+<em class="property">class </em><code class="descclassname">binderhub.repoproviders.</code><code class="descname">RepoProvider</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.RepoProvider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base class for a repo provider</p>
+<dl class="attribute">
+<dt>
+<code class="descname">config c.RepoProvider.banned_specs = List()</code></dt>
+<dd><p>List of specs to blacklist building.</p>
+<p>Should be a list of regexes (not regex objects) that match specs which should be blacklisted</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.RepoProvider.git_credentials = Unicode('')</code></dt>
+<dd><p>Credentials (if any) to pass to git when cloning.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.RepoProvider.high_quota_specs = List()</code></dt>
+<dd><p>List of specs to assign a higher quota limit.</p>
+<p>Should be a list of regexes (not regex objects) that match specs which should have a higher quota</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.RepoProvider.spec_config = List()</code></dt>
+<dd><p>List of dictionaries that define per-repository configuration.</p>
+<p>Each item in the list is a dictionary with two keys:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>pattern<span class="classifier">string</span></dt><dd><p>defines a regex pattern (not a regex object) that matches specs.</p>
+</dd>
+<dt>config<span class="classifier">dict</span></dt><dd><p>a dictionary of “config_name: config_value” pairs that will be
+applied to any repository that matches <code class="docutils literal notranslate"><span class="pre">pattern</span></code></p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.RepoProvider.banned_specs = List()</code></dt>
+<dd><p>List of specs to blacklist building.</p>
+<p>Should be a list of regexes (not regex objects) that match specs which should be blacklisted</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.RepoProvider.get_build_slug">
+<code class="descname">get_build_slug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.RepoProvider.get_build_slug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a unique build slug</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.RepoProvider.get_repo_url">
+<code class="descname">get_repo_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.RepoProvider.get_repo_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the git clone-able repo URL</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.RepoProvider.get_resolved_ref_url">
+<code class="descname">get_resolved_ref_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.RepoProvider.get_resolved_ref_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the URL of repository at this commit in history</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.RepoProvider.get_resolved_spec">
+<code class="descname">get_resolved_spec</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.RepoProvider.get_resolved_spec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the spec with resolved ref.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.RepoProvider.git_credentials = Unicode('')</code></dt>
+<dd><p>Credentials (if any) to pass to git when cloning.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.RepoProvider.has_higher_quota">
+<code class="descname">has_higher_quota</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.RepoProvider.has_higher_quota" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return true if the given spec has a higher quota</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.RepoProvider.high_quota_specs = List()</code></dt>
+<dd><p>List of specs to assign a higher quota limit.</p>
+<p>Should be a list of regexes (not regex objects) that match specs which should have a higher quota</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.RepoProvider.is_banned">
+<code class="descname">is_banned</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.RepoProvider.is_banned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return true if the given spec has been banned</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.RepoProvider.repo_config">
+<code class="descname">repo_config</code><span class="sig-paren">(</span><em>settings</em><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.RepoProvider.repo_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return configuration for this repository.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.RepoProvider.spec_config = List()</code></dt>
+<dd><p>List of dictionaries that define per-repository configuration.</p>
+<p>Each item in the list is a dictionary with two keys:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>pattern<span class="classifier">string</span></dt><dd><p>defines a regex pattern (not a regex object) that matches specs.</p>
+</dd>
+<dt>config<span class="classifier">dict</span></dt><dd><p>a dictionary of “config_name: config_value” pairs that will be
+applied to any repository that matches <code class="docutils literal notranslate"><span class="pre">pattern</span></code></p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="githubrepoprovider">
+<h2><a class="reference internal" href="#binderhub.repoproviders.GitHubRepoProvider" title="binderhub.repoproviders.GitHubRepoProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">GitHubRepoProvider</span></code></a><a class="headerlink" href="#githubrepoprovider" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="binderhub.repoproviders.GitHubRepoProvider">
+<em class="property">class </em><code class="descclassname">binderhub.repoproviders.</code><code class="descname">GitHubRepoProvider</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.GitHubRepoProvider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Repo provider for the GitHub service</p>
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitHubRepoProvider.access_token = Unicode('')</code></dt>
+<dd><p>GitHub access token for authentication with the GitHub API</p>
+<p>Loaded from GITHUB_ACCESS_TOKEN env by default.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitHubRepoProvider.api_base_path = Unicode('https://api.{hostname}')</code></dt>
+<dd><p>The base path of the GitHub API</p>
+<p>Only necessary if not github.com,
+e.g. GitHub Enterprise.</p>
+<p>Can use {hostname} for substitution,
+e.g. ‘<a class="reference external" href="https:/">https:/</a>/{hostname}/api/v3’</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitHubRepoProvider.banned_specs = List()</code></dt>
+<dd><p>List of specs to blacklist building.</p>
+<p>Should be a list of regexes (not regex objects) that match specs which should be blacklisted</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitHubRepoProvider.client_id = Unicode('')</code></dt>
+<dd><p>GitHub client id for authentication with the GitHub API</p>
+<p>For use with client_secret.
+Loaded from GITHUB_CLIENT_ID env by default.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitHubRepoProvider.client_secret = Unicode('')</code></dt>
+<dd><p>GitHub client secret for authentication with the GitHub API</p>
+<p>For use with client_id.
+Loaded from GITHUB_CLIENT_SECRET env by default.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitHubRepoProvider.git_credentials = Unicode('')</code></dt>
+<dd><p>Credentials (if any) to pass to git when cloning.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitHubRepoProvider.high_quota_specs = List()</code></dt>
+<dd><p>List of specs to assign a higher quota limit.</p>
+<p>Should be a list of regexes (not regex objects) that match specs which should have a higher quota</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitHubRepoProvider.hostname = Unicode('github.com')</code></dt>
+<dd><p>The GitHub hostname to use</p>
+<p>Only necessary if not github.com,
+e.g. GitHub Enterprise.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitHubRepoProvider.spec_config = List()</code></dt>
+<dd><p>List of dictionaries that define per-repository configuration.</p>
+<p>Each item in the list is a dictionary with two keys:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>pattern<span class="classifier">string</span></dt><dd><p>defines a regex pattern (not a regex object) that matches specs.</p>
+</dd>
+<dt>config<span class="classifier">dict</span></dt><dd><p>a dictionary of “config_name: config_value” pairs that will be
+applied to any repository that matches <code class="docutils literal notranslate"><span class="pre">pattern</span></code></p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitHubRepoProvider.access_token = Unicode('')</code></dt>
+<dd><p>GitHub access token for authentication with the GitHub API</p>
+<p>Loaded from GITHUB_ACCESS_TOKEN env by default.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitHubRepoProvider.api_base_path = Unicode('https://api.{hostname}')</code></dt>
+<dd><p>The base path of the GitHub API</p>
+<p>Only necessary if not github.com,
+e.g. GitHub Enterprise.</p>
+<p>Can use {hostname} for substitution,
+e.g. ‘<a class="reference external" href="https:/">https:/</a>/{hostname}/api/v3’</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitHubRepoProvider.client_id = Unicode('')</code></dt>
+<dd><p>GitHub client id for authentication with the GitHub API</p>
+<p>For use with client_secret.
+Loaded from GITHUB_CLIENT_ID env by default.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitHubRepoProvider.client_secret = Unicode('')</code></dt>
+<dd><p>GitHub client secret for authentication with the GitHub API</p>
+<p>For use with client_id.
+Loaded from GITHUB_CLIENT_SECRET env by default.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.GitHubRepoProvider.get_build_slug">
+<code class="descname">get_build_slug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.GitHubRepoProvider.get_build_slug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a unique build slug</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.GitHubRepoProvider.get_repo_url">
+<code class="descname">get_repo_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.GitHubRepoProvider.get_repo_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the git clone-able repo URL</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.GitHubRepoProvider.get_resolved_ref_url">
+<code class="descname">get_resolved_ref_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.GitHubRepoProvider.get_resolved_ref_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the URL of repository at this commit in history</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.GitHubRepoProvider.get_resolved_spec">
+<code class="descname">get_resolved_spec</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.GitHubRepoProvider.get_resolved_spec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the spec with resolved ref.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitHubRepoProvider.hostname = Unicode('github.com')</code></dt>
+<dd><p>The GitHub hostname to use</p>
+<p>Only necessary if not github.com,
+e.g. GitHub Enterprise.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="gitlabrepoprovider">
+<h2><a class="reference internal" href="#binderhub.repoproviders.GitLabRepoProvider" title="binderhub.repoproviders.GitLabRepoProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">GitLabRepoProvider</span></code></a><a class="headerlink" href="#gitlabrepoprovider" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="binderhub.repoproviders.GitLabRepoProvider">
+<em class="property">class </em><code class="descclassname">binderhub.repoproviders.</code><code class="descname">GitLabRepoProvider</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.GitLabRepoProvider" title="Permalink to this definition">¶</a></dt>
+<dd><p>GitLab provider.</p>
+<p>GitLab allows nested namespaces (eg. root/project/component/repo) thus we need to urlescape the namespace of this
+repo.  Users must provide a spec that matches the following form.</p>
+<p>&lt;url-escaped-namespace&gt;/&lt;unresolved_ref&gt;</p>
+<p>eg:
+group%2Fproject%2Frepo/master</p>
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitLabRepoProvider.access_token = Unicode('')</code></dt>
+<dd><p>GitLab OAuth2 access token for authentication with the GitLab API</p>
+<p>For use with client_secret.
+Loaded from GITLAB_ACCESS_TOKEN env by default.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitLabRepoProvider.banned_specs = List()</code></dt>
+<dd><p>List of specs to blacklist building.</p>
+<p>Should be a list of regexes (not regex objects) that match specs which should be blacklisted</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitLabRepoProvider.git_credentials = Unicode('')</code></dt>
+<dd><p>Credentials (if any) to pass to git when cloning.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitLabRepoProvider.high_quota_specs = List()</code></dt>
+<dd><p>List of specs to assign a higher quota limit.</p>
+<p>Should be a list of regexes (not regex objects) that match specs which should have a higher quota</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitLabRepoProvider.hostname = Unicode('gitlab.com')</code></dt>
+<dd><p>The host of the GitLab instance</p>
+<p>For personal GitLab servers.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitLabRepoProvider.private_token = Unicode('')</code></dt>
+<dd><p>GitLab private token for authentication with the GitLab API</p>
+<p>Loaded from GITLAB_PRIVATE_TOKEN env by default.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitLabRepoProvider.spec_config = List()</code></dt>
+<dd><p>List of dictionaries that define per-repository configuration.</p>
+<p>Each item in the list is a dictionary with two keys:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>pattern<span class="classifier">string</span></dt><dd><p>defines a regex pattern (not a regex object) that matches specs.</p>
+</dd>
+<dt>config<span class="classifier">dict</span></dt><dd><p>a dictionary of “config_name: config_value” pairs that will be
+applied to any repository that matches <code class="docutils literal notranslate"><span class="pre">pattern</span></code></p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitLabRepoProvider.access_token = Unicode('')</code></dt>
+<dd><p>GitLab OAuth2 access token for authentication with the GitLab API</p>
+<p>For use with client_secret.
+Loaded from GITLAB_ACCESS_TOKEN env by default.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.GitLabRepoProvider.get_build_slug">
+<code class="descname">get_build_slug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.GitLabRepoProvider.get_build_slug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a unique build slug</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.GitLabRepoProvider.get_repo_url">
+<code class="descname">get_repo_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.GitLabRepoProvider.get_repo_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the git clone-able repo URL</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.GitLabRepoProvider.get_resolved_ref_url">
+<code class="descname">get_resolved_ref_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.GitLabRepoProvider.get_resolved_ref_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the URL of repository at this commit in history</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.GitLabRepoProvider.get_resolved_spec">
+<code class="descname">get_resolved_spec</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.GitLabRepoProvider.get_resolved_spec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the spec with resolved ref.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitLabRepoProvider.hostname = Unicode('gitlab.com')</code></dt>
+<dd><p>The host of the GitLab instance</p>
+<p>For personal GitLab servers.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitLabRepoProvider.private_token = Unicode('')</code></dt>
+<dd><p>GitLab private token for authentication with the GitLab API</p>
+<p>Loaded from GITLAB_PRIVATE_TOKEN env by default.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="gistrepoprovider">
+<h2><a class="reference internal" href="#binderhub.repoproviders.GistRepoProvider" title="binderhub.repoproviders.GistRepoProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">GistRepoProvider</span></code></a><a class="headerlink" href="#gistrepoprovider" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="binderhub.repoproviders.GistRepoProvider">
+<em class="property">class </em><code class="descclassname">binderhub.repoproviders.</code><code class="descname">GistRepoProvider</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.GistRepoProvider" title="Permalink to this definition">¶</a></dt>
+<dd><p>GitHub gist provider.</p>
+<p>Users must provide a spec that matches the following form (similar to github)</p>
+<p>[<a class="reference external" href="https://gist.github.com/">https://gist.github.com/</a>]&lt;username&gt;/&lt;gist-id&gt;[/&lt;ref&gt;]</p>
+<dl class="simple">
+<dt>The ref is optional, valid values are</dt><dd><ul class="simple">
+<li><p>a full sha1 of a ref in the history</p></li>
+<li><p>master</p></li>
+</ul>
+</dd>
+</dl>
+<p>If master or no ref is specified the latest revision will be used.</p>
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GistRepoProvider.access_token = Unicode('')</code></dt>
+<dd><p>GitHub access token for authentication with the GitHub API</p>
+<p>Loaded from GITHUB_ACCESS_TOKEN env by default.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GistRepoProvider.allow_secret_gist = Bool(False)</code></dt>
+<dd><p>Flag for allowing usages of secret Gists.  The default behavior is to disallow secret gists.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GistRepoProvider.api_base_path = Unicode('https://api.{hostname}')</code></dt>
+<dd><p>The base path of the GitHub API</p>
+<p>Only necessary if not github.com,
+e.g. GitHub Enterprise.</p>
+<p>Can use {hostname} for substitution,
+e.g. ‘<a class="reference external" href="https:/">https:/</a>/{hostname}/api/v3’</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GistRepoProvider.banned_specs = List()</code></dt>
+<dd><p>List of specs to blacklist building.</p>
+<p>Should be a list of regexes (not regex objects) that match specs which should be blacklisted</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GistRepoProvider.client_id = Unicode('')</code></dt>
+<dd><p>GitHub client id for authentication with the GitHub API</p>
+<p>For use with client_secret.
+Loaded from GITHUB_CLIENT_ID env by default.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GistRepoProvider.client_secret = Unicode('')</code></dt>
+<dd><p>GitHub client secret for authentication with the GitHub API</p>
+<p>For use with client_id.
+Loaded from GITHUB_CLIENT_SECRET env by default.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GistRepoProvider.git_credentials = Unicode('')</code></dt>
+<dd><p>Credentials (if any) to pass to git when cloning.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GistRepoProvider.high_quota_specs = List()</code></dt>
+<dd><p>List of specs to assign a higher quota limit.</p>
+<p>Should be a list of regexes (not regex objects) that match specs which should have a higher quota</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GistRepoProvider.spec_config = List()</code></dt>
+<dd><p>List of dictionaries that define per-repository configuration.</p>
+<p>Each item in the list is a dictionary with two keys:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>pattern<span class="classifier">string</span></dt><dd><p>defines a regex pattern (not a regex object) that matches specs.</p>
+</dd>
+<dt>config<span class="classifier">dict</span></dt><dd><p>a dictionary of “config_name: config_value” pairs that will be
+applied to any repository that matches <code class="docutils literal notranslate"><span class="pre">pattern</span></code></p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GistRepoProvider.allow_secret_gist = Bool(False)</code></dt>
+<dd><p>Flag for allowing usages of secret Gists.  The default behavior is to disallow secret gists.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.GistRepoProvider.get_build_slug">
+<code class="descname">get_build_slug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.GistRepoProvider.get_build_slug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a unique build slug</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.GistRepoProvider.get_repo_url">
+<code class="descname">get_repo_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.GistRepoProvider.get_repo_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the git clone-able repo URL</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.GistRepoProvider.get_resolved_ref_url">
+<code class="descname">get_resolved_ref_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.GistRepoProvider.get_resolved_ref_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the URL of repository at this commit in history</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.GistRepoProvider.get_resolved_spec">
+<code class="descname">get_resolved_spec</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.GistRepoProvider.get_resolved_spec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the spec with resolved ref.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="zenodoprovider">
+<h2><a class="reference internal" href="#binderhub.repoproviders.ZenodoProvider" title="binderhub.repoproviders.ZenodoProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">ZenodoProvider</span></code></a><a class="headerlink" href="#zenodoprovider" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="binderhub.repoproviders.ZenodoProvider">
+<em class="property">class </em><code class="descclassname">binderhub.repoproviders.</code><code class="descname">ZenodoProvider</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.ZenodoProvider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide contents of a Zenodo record</p>
+<p>Users must provide a spec consisting of the Zenodo DOI.</p>
+<dl class="attribute">
+<dt>
+<code class="descname">config c.ZenodoProvider.banned_specs = List()</code></dt>
+<dd><p>List of specs to blacklist building.</p>
+<p>Should be a list of regexes (not regex objects) that match specs which should be blacklisted</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.ZenodoProvider.git_credentials = Unicode('')</code></dt>
+<dd><p>Credentials (if any) to pass to git when cloning.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.ZenodoProvider.high_quota_specs = List()</code></dt>
+<dd><p>List of specs to assign a higher quota limit.</p>
+<p>Should be a list of regexes (not regex objects) that match specs which should have a higher quota</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.ZenodoProvider.spec_config = List()</code></dt>
+<dd><p>List of dictionaries that define per-repository configuration.</p>
+<p>Each item in the list is a dictionary with two keys:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>pattern<span class="classifier">string</span></dt><dd><p>defines a regex pattern (not a regex object) that matches specs.</p>
+</dd>
+<dt>config<span class="classifier">dict</span></dt><dd><p>a dictionary of “config_name: config_value” pairs that will be
+applied to any repository that matches <code class="docutils literal notranslate"><span class="pre">pattern</span></code></p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.ZenodoProvider.get_build_slug">
+<code class="descname">get_build_slug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.ZenodoProvider.get_build_slug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a unique build slug</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.ZenodoProvider.get_repo_url">
+<code class="descname">get_repo_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.ZenodoProvider.get_repo_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the git clone-able repo URL</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.ZenodoProvider.get_resolved_ref_url">
+<code class="descname">get_resolved_ref_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.ZenodoProvider.get_resolved_ref_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the URL of repository at this commit in history</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.ZenodoProvider.get_resolved_spec">
+<code class="descname">get_resolved_spec</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.ZenodoProvider.get_resolved_spec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the spec with resolved ref.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="figshareprovider">
+<h2><a class="reference internal" href="#binderhub.repoproviders.FigshareProvider" title="binderhub.repoproviders.FigshareProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">FigshareProvider</span></code></a><a class="headerlink" href="#figshareprovider" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="binderhub.repoproviders.FigshareProvider">
+<em class="property">class </em><code class="descclassname">binderhub.repoproviders.</code><code class="descname">FigshareProvider</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.FigshareProvider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide contents of a Figshare article</p>
+<p>Users must provide a spec consisting of the Figshare DOI.</p>
+<dl class="attribute">
+<dt>
+<code class="descname">config c.FigshareProvider.banned_specs = List()</code></dt>
+<dd><p>List of specs to blacklist building.</p>
+<p>Should be a list of regexes (not regex objects) that match specs which should be blacklisted</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.FigshareProvider.git_credentials = Unicode('')</code></dt>
+<dd><p>Credentials (if any) to pass to git when cloning.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.FigshareProvider.high_quota_specs = List()</code></dt>
+<dd><p>List of specs to assign a higher quota limit.</p>
+<p>Should be a list of regexes (not regex objects) that match specs which should have a higher quota</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.FigshareProvider.spec_config = List()</code></dt>
+<dd><p>List of dictionaries that define per-repository configuration.</p>
+<p>Each item in the list is a dictionary with two keys:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>pattern<span class="classifier">string</span></dt><dd><p>defines a regex pattern (not a regex object) that matches specs.</p>
+</dd>
+<dt>config<span class="classifier">dict</span></dt><dd><p>a dictionary of “config_name: config_value” pairs that will be
+applied to any repository that matches <code class="docutils literal notranslate"><span class="pre">pattern</span></code></p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.FigshareProvider.get_build_slug">
+<code class="descname">get_build_slug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.FigshareProvider.get_build_slug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a unique build slug</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.FigshareProvider.get_repo_url">
+<code class="descname">get_repo_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.FigshareProvider.get_repo_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the git clone-able repo URL</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.FigshareProvider.get_resolved_ref_url">
+<code class="descname">get_resolved_ref_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.FigshareProvider.get_resolved_ref_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the URL of repository at this commit in history</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.FigshareProvider.get_resolved_spec">
+<code class="descname">get_resolved_spec</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.FigshareProvider.get_resolved_spec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the spec with resolved ref.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="hydroshareprovider">
+<h2><a class="reference internal" href="#binderhub.repoproviders.HydroshareProvider" title="binderhub.repoproviders.HydroshareProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">HydroshareProvider</span></code></a><a class="headerlink" href="#hydroshareprovider" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="binderhub.repoproviders.HydroshareProvider">
+<em class="property">class </em><code class="descclassname">binderhub.repoproviders.</code><code class="descname">HydroshareProvider</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.HydroshareProvider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provide contents of a Hydroshare resource
+Users must provide a spec consisting of the Hydroshare resource id.</p>
+<dl class="attribute">
+<dt>
+<code class="descname">config c.HydroshareProvider.banned_specs = List()</code></dt>
+<dd><p>List of specs to blacklist building.</p>
+<p>Should be a list of regexes (not regex objects) that match specs which should be blacklisted</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.HydroshareProvider.git_credentials = Unicode('')</code></dt>
+<dd><p>Credentials (if any) to pass to git when cloning.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.HydroshareProvider.high_quota_specs = List()</code></dt>
+<dd><p>List of specs to assign a higher quota limit.</p>
+<p>Should be a list of regexes (not regex objects) that match specs which should have a higher quota</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.HydroshareProvider.spec_config = List()</code></dt>
+<dd><p>List of dictionaries that define per-repository configuration.</p>
+<p>Each item in the list is a dictionary with two keys:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>pattern<span class="classifier">string</span></dt><dd><p>defines a regex pattern (not a regex object) that matches specs.</p>
+</dd>
+<dt>config<span class="classifier">dict</span></dt><dd><p>a dictionary of “config_name: config_value” pairs that will be
+applied to any repository that matches <code class="docutils literal notranslate"><span class="pre">pattern</span></code></p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.HydroshareProvider.get_build_slug">
+<code class="descname">get_build_slug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.HydroshareProvider.get_build_slug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a unique build slug</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.HydroshareProvider.get_repo_url">
+<code class="descname">get_repo_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.HydroshareProvider.get_repo_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the git clone-able repo URL</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.HydroshareProvider.get_resolved_ref_url">
+<code class="descname">get_resolved_ref_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.HydroshareProvider.get_resolved_ref_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the URL of repository at this commit in history</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.HydroshareProvider.get_resolved_spec">
+<code class="descname">get_resolved_spec</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.HydroshareProvider.get_resolved_spec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the spec with resolved ref.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="dataverseprovider">
+<h2><a class="reference internal" href="#binderhub.repoproviders.DataverseProvider" title="binderhub.repoproviders.DataverseProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataverseProvider</span></code></a><a class="headerlink" href="#dataverseprovider" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="binderhub.repoproviders.DataverseProvider">
+<em class="property">class </em><code class="descclassname">binderhub.repoproviders.</code><code class="descname">DataverseProvider</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.DataverseProvider" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt>
+<code class="descname">config c.DataverseProvider.banned_specs = List()</code></dt>
+<dd><p>List of specs to blacklist building.</p>
+<p>Should be a list of regexes (not regex objects) that match specs which should be blacklisted</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.DataverseProvider.git_credentials = Unicode('')</code></dt>
+<dd><p>Credentials (if any) to pass to git when cloning.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.DataverseProvider.high_quota_specs = List()</code></dt>
+<dd><p>List of specs to assign a higher quota limit.</p>
+<p>Should be a list of regexes (not regex objects) that match specs which should have a higher quota</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.DataverseProvider.spec_config = List()</code></dt>
+<dd><p>List of dictionaries that define per-repository configuration.</p>
+<p>Each item in the list is a dictionary with two keys:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>pattern<span class="classifier">string</span></dt><dd><p>defines a regex pattern (not a regex object) that matches specs.</p>
+</dd>
+<dt>config<span class="classifier">dict</span></dt><dd><p>a dictionary of “config_name: config_value” pairs that will be
+applied to any repository that matches <code class="docutils literal notranslate"><span class="pre">pattern</span></code></p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.DataverseProvider.get_build_slug">
+<code class="descname">get_build_slug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.DataverseProvider.get_build_slug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a unique build slug</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.DataverseProvider.get_repo_url">
+<code class="descname">get_repo_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.DataverseProvider.get_repo_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the git clone-able repo URL</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.DataverseProvider.get_resolved_ref_url">
+<code class="descname">get_resolved_ref_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.DataverseProvider.get_resolved_ref_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the URL of repository at this commit in history</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.DataverseProvider.get_resolved_spec">
+<code class="descname">get_resolved_spec</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.DataverseProvider.get_resolved_spec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the spec with resolved ref.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="gitrepoprovider">
+<h2><a class="reference internal" href="#binderhub.repoproviders.GitRepoProvider" title="binderhub.repoproviders.GitRepoProvider"><code class="xref py py-class docutils literal notranslate"><span class="pre">GitRepoProvider</span></code></a><a class="headerlink" href="#gitrepoprovider" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="binderhub.repoproviders.GitRepoProvider">
+<em class="property">class </em><code class="descclassname">binderhub.repoproviders.</code><code class="descname">GitRepoProvider</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.GitRepoProvider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bare bones git repo provider.</p>
+<p>Users must provide a spec of the following form.</p>
+<p>&lt;url-escaped-namespace&gt;/&lt;unresolved_ref&gt;
+&lt;url-escaped-namespace&gt;/&lt;resolved_ref&gt;</p>
+<p>eg:
+https%3A%2F%2Fgithub.com%2Fjupyterhub%2Fzero-to-jupyterhub-k8s/master
+https%3A%2F%2Fgithub.com%2Fjupyterhub%2Fzero-to-jupyterhub-k8s/f7f3ff6d1bf708bdc12e5f10e18b2a90a4795603</p>
+<p>This provider is typically used if you are deploying binderhub yourself and you require access to repositories that
+are not in one of the supported providers.</p>
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitRepoProvider.banned_specs = List()</code></dt>
+<dd><p>List of specs to blacklist building.</p>
+<p>Should be a list of regexes (not regex objects) that match specs which should be blacklisted</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitRepoProvider.git_credentials = Unicode('')</code></dt>
+<dd><p>Credentials (if any) to pass to git when cloning.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitRepoProvider.high_quota_specs = List()</code></dt>
+<dd><p>List of specs to assign a higher quota limit.</p>
+<p>Should be a list of regexes (not regex objects) that match specs which should have a higher quota</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt>
+<code class="descname">config c.GitRepoProvider.spec_config = List()</code></dt>
+<dd><p>List of dictionaries that define per-repository configuration.</p>
+<p>Each item in the list is a dictionary with two keys:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>pattern<span class="classifier">string</span></dt><dd><p>defines a regex pattern (not a regex object) that matches specs.</p>
+</dd>
+<dt>config<span class="classifier">dict</span></dt><dd><p>a dictionary of “config_name: config_value” pairs that will be
+applied to any repository that matches <code class="docutils literal notranslate"><span class="pre">pattern</span></code></p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.GitRepoProvider.get_build_slug">
+<code class="descname">get_build_slug</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.GitRepoProvider.get_build_slug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a unique build slug</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.GitRepoProvider.get_repo_url">
+<code class="descname">get_repo_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.GitRepoProvider.get_repo_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the git clone-able repo URL</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.GitRepoProvider.get_resolved_ref_url">
+<code class="descname">get_resolved_ref_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.GitRepoProvider.get_resolved_ref_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the URL of repository at this commit in history</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="binderhub.repoproviders.GitRepoProvider.get_resolved_spec">
+<code class="descname">get_resolved_spec</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#binderhub.repoproviders.GitRepoProvider.get_resolved_spec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the spec with resolved ref.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="registry.html" title="previous page">registry</a>
+    <a class='right-next' id="next-link" href="../community/index.html" title="next page">Community</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="../_static/js/index.js"></script>
+    <footer class="footer">
+  <div class="container">
+    <p>
+          &copy; Copyright 2017, The Jupyter Team.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.0.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

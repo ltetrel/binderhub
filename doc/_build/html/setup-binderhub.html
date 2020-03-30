@@ -1,0 +1,704 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>3. Set up BinderHub &#8212; BinderHub 0.1.0 documentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="https://gitcdn.link/repo/jupyterhub/binder/master/doc/_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link href="_static/css/index.css" rel="stylesheet">
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4. Tear down your Binder deployment" href="turn-off.html" />
+    <link rel="prev" title="2. Set up the container registry" href="setup-registry.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+
+<a class="navbar-brand" href="index.html">
+  <img src="_static/logo.png" class="logo" alt="logo">
+</a>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div id="navbar-menu" class="collapse navbar-collapse">
+  <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+    <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+    </li>
+    
+    
+    <li class="nav-item active">
+        <a class="nav-link" href="zero-to-binderhub/index.html">Zero to BinderHub</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="customization/index.html">Customization</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="developer/index.html">Administrators and developers</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="community/index.html">Community</a>
+    </li>
+    
+    
+  </ul>
+  <ul class="navbar-nav ml-auto">
+    
+    
+  </ul>
+</div>
+    </nav>
+    
+
+    <div class="container-fluid">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+        
+          
+              <li class="">
+                  <a href="create-cloud-resources.html">Create your cloud resources</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="setup-registry.html">Set up the container registry</a>
+              </li>
+          
+        
+          
+              <li class="active">
+                  <a href="">Set up BinderHub</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="turn-off.html">Tear down your Binder deployment</a>
+              </li>
+          
+        
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+
+
+<div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#preparing-to-install" class="nav-link">Preparing to install</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#create-secret-yaml-file" class="nav-link">Create secret.yaml file</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#if-you-are-using-gcr-io" class="nav-link">If you are using gcr.io</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#if-you-are-using-docker-hub" class="nav-link">If you are using Docker Hub</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#if-you-are-using-azure-container-registry" class="nav-link">If you are using Azure Container Registry</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#create-config-yaml" class="nav-link">Create config.yaml</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#id1" class="nav-link">If you are using gcr.io</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#id2" class="nav-link">If you are using Docker Hub</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#id3" class="nav-link">If you are using Azure Container Registry</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#if-you-are-using-a-custom-registry" class="nav-link">If you are using a custom registry</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#install-binderhub" class="nav-link">Install BinderHub</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#connect-binderhub-and-jupyterhub" class="nav-link">Connect BinderHub and JupyterHub</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#try-out-your-binderhub-deployment" class="nav-link">Try out your BinderHub Deployment</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#customizing-your-deployment" class="nav-link">Customizing your Deployment</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#increase-your-github-api-limit" class="nav-link">Increase your GitHub API limit</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#accessing-private-repositories" class="nav-link">Accessing private repositories</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#github" class="nav-link">GitHub</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#gitlab" class="nav-link">GitLab</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#use-docker-inside-docker-dind" class="nav-link">Use Docker-inside-Docker (DinD)</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="set-up-binderhub">
+<h1>3. Set up BinderHub<a class="headerlink" href="#set-up-binderhub" title="Permalink to this headline">¶</a></h1>
+<p>BinderHub uses Helm Charts to set up the applications we’ll use in our Binder
+deployment. If you’re curious about what Helm Charts are and how they’re
+used here, see the <a class="reference external" href="https://zero-to-jupyterhub.readthedocs.io/en/latest/tools.html#helm">Zero to JupyterHub guide</a>.</p>
+<p>Below we’ll cover how to configure your Helm Chart, and how to create your
+BinderHub deployment.</p>
+<div class="section" id="preparing-to-install">
+<h2>3.1. Preparing to install<a class="headerlink" href="#preparing-to-install" title="Permalink to this headline">¶</a></h2>
+<p>To configure the Helm Chart we’ll need to generate several pieces of
+information and insert them into <code class="docutils literal notranslate"><span class="pre">yaml</span></code> files.</p>
+<p>First we’ll create a folder where we’ll store our BinderHub configuration
+files. You can do so with the following commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">binderhub</span>
+<span class="n">cd</span> <span class="n">binderhub</span>
+</pre></div>
+</div>
+<p>Now we’ll collect the information we need to deploy our BinderHub.
+The first is the content of the JSON file created when we set up
+the container registry. For more information on getting a registry password, see
+<a class="reference internal" href="setup-registry.html#setup-registry"><span class="std std-ref">Set up the container registry</span></a>. We’ll copy/paste the contents of this file in the steps
+below.</p>
+<p>Create two random tokens by running the following commands then copying the
+outputs.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">openssl</span> <span class="n">rand</span> <span class="o">-</span><span class="nb">hex</span> <span class="mi">32</span>
+<span class="n">openssl</span> <span class="n">rand</span> <span class="o">-</span><span class="nb">hex</span> <span class="mi">32</span>
+</pre></div>
+</div>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>This command is run <strong>twice</strong> because we need two different tokens.</p>
+</div>
+</div>
+<div class="section" id="create-secret-yaml-file">
+<h2>3.2. Create <code class="docutils literal notranslate"><span class="pre">secret.yaml</span></code> file<a class="headerlink" href="#create-secret-yaml-file" title="Permalink to this headline">¶</a></h2>
+<p>Create a file called <code class="docutils literal notranslate"><span class="pre">secret.yaml</span></code> and add the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyterhub</span><span class="p">:</span>
+  <span class="n">hub</span><span class="p">:</span>
+    <span class="n">services</span><span class="p">:</span>
+      <span class="n">binder</span><span class="p">:</span>
+        <span class="n">apiToken</span><span class="p">:</span> <span class="s2">&quot;&lt;output of FIRST `openssl rand -hex 32` command&gt;&quot;</span>
+  <span class="n">proxy</span><span class="p">:</span>
+    <span class="n">secretToken</span><span class="p">:</span> <span class="s2">&quot;&lt;output of SECOND `openssl rand -hex 32` command&gt;&quot;</span>
+</pre></div>
+</div>
+<p>Next, we’ll configure this file to connect with our registry.</p>
+<div class="section" id="if-you-are-using-gcr-io">
+<h3>3.2.1. If you are using <code class="docutils literal notranslate"><span class="pre">gcr.io</span></code><a class="headerlink" href="#if-you-are-using-gcr-io" title="Permalink to this headline">¶</a></h3>
+<p>Add the information needed to connect with the registry to <code class="docutils literal notranslate"><span class="pre">secret.yaml</span></code>.
+You’ll need the content in the JSON file that was created when we created
+our <code class="docutils literal notranslate"><span class="pre">gcr.io</span></code> registry account. Below we show the structure of the YAML you
+need to insert. Note that the first line is not indented at all:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">registry</span><span class="p">:</span>
+  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gcr</span><span class="o">.</span><span class="n">io</span>
+  <span class="c1"># below is the content of the JSON file downloaded earlier for the container registry from Service Accounts</span>
+  <span class="c1"># it will look something like the following (with actual values instead of empty strings)</span>
+  <span class="c1"># paste the content after `password: |` below</span>
+  <span class="n">password</span><span class="p">:</span> <span class="o">|</span>
+    <span class="p">{</span>
+    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;REPLACE&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;project_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;REPLACE&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;private_key_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;REPLACE&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;private_key&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;REPLACE&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;client_email&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;REPLACE&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;client_id&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;REPLACE&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;auth_uri&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;REPLACE&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;token_uri&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;REPLACE&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;auth_provider_x509_cert_url&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;REPLACE&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;client_x509_cert_url&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;REPLACE&gt;&quot;</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+<div class="alert alert-primary">
+<p class="admonition-title">Tip</p>
+<ul class="simple">
+<li><p>The content you put just after <code class="docutils literal notranslate"><span class="pre">password:</span> <span class="pre">|</span></code> must all line up at the same
+tab level.</p></li>
+<li><p>Don’t forget the <code class="docutils literal notranslate"><span class="pre">|</span></code> after the <code class="docutils literal notranslate"><span class="pre">password:</span></code> label.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="if-you-are-using-docker-hub">
+<h3>3.2.2. If you are using Docker Hub<a class="headerlink" href="#if-you-are-using-docker-hub" title="Permalink to this headline">¶</a></h3>
+<p>Update <code class="docutils literal notranslate"><span class="pre">secret.yaml</span></code> by entering the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">registry</span><span class="p">:</span>
+  <span class="n">username</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">docker</span><span class="o">-</span><span class="nb">id</span><span class="o">&gt;</span>
+  <span class="n">password</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;docker-id&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;password&gt;</span></code> are your credentials to login to Docker Hub.
+If you use an organization to store your Docker images, this account must be a member of it.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="if-you-are-using-azure-container-registry">
+<h3>3.2.3. If you are using Azure Container Registry<a class="headerlink" href="#if-you-are-using-azure-container-registry" title="Permalink to this headline">¶</a></h3>
+<p>Update <code class="docutils literal notranslate"><span class="pre">secret.yaml</span></code> to include the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">registry</span><span class="p">:</span>
+  <span class="n">url</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">ACR_NAME</span><span class="o">&gt;.</span><span class="n">azurecr</span><span class="o">.</span><span class="n">io</span>
+  <span class="n">username</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">SERVICE_PRINCIPAL_ID</span><span class="o">&gt;</span>
+  <span class="n">password</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">SERVICE_PRINCIPAL_PASSWORD</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;ACR_NAME&gt;</span></code> is the name you gave to your Azure Container Registry,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;SERVICE_PRINCIPAL_ID&gt;</span></code> is the AppID of the Service Principal with AcrPush role assignment,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;SERVICE_PRINCIPAL_PASSWORD&gt;</span></code> is the password for the Service Principal.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="create-config-yaml">
+<h2>3.3. Create <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code><a class="headerlink" href="#create-config-yaml" title="Permalink to this headline">¶</a></h2>
+<p>Create a file called <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> and choose the following directions based
+on the registry you are using.</p>
+<div class="section" id="id1">
+<h3>3.3.1. If you are using <code class="docutils literal notranslate"><span class="pre">gcr.io</span></code><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>To configure BinderHub to use <code class="docutils literal notranslate"><span class="pre">gcr.io</span></code>, simply add the following to
+your <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="p">:</span>
+  <span class="n">BinderHub</span><span class="p">:</span>
+    <span class="n">use_registry</span><span class="p">:</span> <span class="n">true</span>
+    <span class="n">image_prefix</span><span class="p">:</span> <span class="n">gcr</span><span class="o">.</span><span class="n">io</span><span class="o">/&lt;</span><span class="n">google</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="nb">id</span><span class="o">&gt;/&lt;</span><span class="n">prefix</span><span class="o">&gt;-</span>
+</pre></div>
+</div>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;google-project-id&gt;</span></code> can be found in the JSON file that you
+pasted above. It is the text that is in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code> field. This is
+the project <em>ID</em>, which may be different from the project <em>name</em>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;prefix&gt;</span></code> can be any string, and will be prepended to image names. We
+recommend something descriptive such as <code class="docutils literal notranslate"><span class="pre">binder-dev-</span></code> or <code class="docutils literal notranslate"><span class="pre">binder-prod-</span></code>
+(ending with a <code class="docutils literal notranslate"><span class="pre">-</span></code> is useful).</p></li>
+<li><p>Note that in both cases, you should remove the <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> symbols,
+they are simply placeholders in the code above.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>3.3.2. If you are using Docker Hub<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Update <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> by entering the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="p">:</span>
+  <span class="n">BinderHub</span><span class="p">:</span>
+    <span class="n">use_registry</span><span class="p">:</span> <span class="n">true</span>
+    <span class="n">image_prefix</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">docker</span><span class="o">-</span><span class="nb">id</span> <span class="n">OR</span> <span class="n">organization</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;/&lt;</span><span class="n">prefix</span><span class="o">&gt;-</span>
+</pre></div>
+</div>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p><strong>``&lt;docker-id OR organization-name&gt;``</strong> is where you want to store Docker images.
+This can be your Docker ID account <strong>or</strong> an organization that your account belongs to.</p></li>
+<li><p><strong>``&lt;prefix&gt;``</strong> can be any string, and will be prepended to image names. We
+recommend something descriptive such as <code class="docutils literal notranslate"><span class="pre">binder-dev-</span></code> or <code class="docutils literal notranslate"><span class="pre">binder-prod-</span></code>
+(ending with a <code class="docutils literal notranslate"><span class="pre">-</span></code> is useful).</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>3.3.3. If you are using Azure Container Registry<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>If you want your BinderHub to push and pull images from an Azure Container Registry (ACR), then your <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> file will look as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="p">:</span>
+  <span class="n">BinderHub</span><span class="p">:</span>
+    <span class="n">use_registry</span><span class="p">:</span> <span class="n">true</span>
+    <span class="n">image_prefix</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">ACR_NAME</span><span class="o">&gt;.</span><span class="n">azurecr</span><span class="o">.</span><span class="n">io</span><span class="o">/&lt;</span><span class="n">project</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;/&lt;</span><span class="n">prefix</span><span class="o">&gt;-</span>
+  <span class="n">DockerRegistry</span><span class="p">:</span>
+    <span class="n">token_url</span><span class="p">:</span> <span class="s2">&quot;https://&lt;ACR_NAME&gt;.azurecr.io/oauth2/token?service=&lt;ACR_NAME&gt;.azurecr.io&quot;</span>
+</pre></div>
+</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;ACR_NAME&gt;</span></code> is the name you gave to your ACR,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;project-name&gt;</span></code> is an arbitrary name that is required due to BinderHub assuming that <code class="docutils literal notranslate"><span class="pre">image_prefix</span></code> contains an extra level for the project name.
+See <a class="reference external" href="https://github.com/jupyterhub/binderhub/issues/800">this issue</a> for futher discussion.
+If this is not provided, you may find BinderHub rebuilds images every launch instead of pulling them from the ACR.
+Suggestions for <code class="docutils literal notranslate"><span class="pre">&lt;project-name&gt;</span></code> could be <code class="docutils literal notranslate"><span class="pre">ACR_NAME</span></code> or the name you give your BinderHub.</p></li>
+</ul>
+</div>
+<div class="section" id="if-you-are-using-a-custom-registry">
+<h3>3.3.4. If you are using a custom registry<a class="headerlink" href="#if-you-are-using-a-custom-registry" title="Permalink to this headline">¶</a></h3>
+<p>Authenticating with a Docker registry is slightly more complicated.
+BinderHub knows how to talk to gcr.io and DockerHub,
+but if you are using another registry, you will have to provide more information, in the form of two different urls:</p>
+<ul class="simple">
+<li><p>registry url (added to <code class="docutils literal notranslate"><span class="pre">docker/config.json</span></code>)</p></li>
+<li><p>token url for authenticating access to the registry</p></li>
+</ul>
+<p>First, setup the docker configuration with the host used for authentication:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">registry</span><span class="p">:</span>
+  <span class="n">url</span><span class="p">:</span> <span class="s2">&quot;https://myregistry.io&quot;</span>
+  <span class="n">username</span><span class="p">:</span> <span class="n">xxx</span>
+  <span class="n">password</span><span class="p">:</span> <span class="n">yyy</span>
+</pre></div>
+</div>
+<p>This creates a docker config.json used to check for images in the registry
+and push builds to it.</p>
+<p>Second, you will need to instruct BinderHub about the token URL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="p">:</span>
+  <span class="n">BinderHub</span><span class="p">:</span>
+    <span class="n">use_registry</span><span class="p">:</span> <span class="n">true</span>
+    <span class="n">image_prefix</span><span class="p">:</span> <span class="s2">&quot;your-registry.io/&lt;prefix&gt;-&quot;</span>
+  <span class="n">DockerRegistry</span><span class="p">:</span>
+    <span class="n">token_url</span><span class="p">:</span> <span class="s2">&quot;https://myregistry.io/v2/token?service=&quot;</span>
+</pre></div>
+</div>
+<p>If you setup your own local registry using
+<a class="reference external" href="https://docs.docker.com/registry/deploying/#native-basic-auth">native basic HTTP authentication</a>
+(htpasswd), you can set <code class="docutils literal notranslate"><span class="pre">token_url</span></code> to <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>There is one additional URL to set in the unlikely event that docker config.json
+must use a different URL to refer to a registry than the registry’s actual url.
+If this is the case, <code class="docutils literal notranslate"><span class="pre">registry.url</span></code> at the top-level
+must match <code class="docutils literal notranslate"><span class="pre">DockerRegistry.auth_config_url</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">registry</span><span class="p">:</span>
+  <span class="n">url</span><span class="p">:</span> <span class="s2">&quot;https://&quot;</span>
+</pre></div>
+</div>
+<p>It’s not clear that this can ever be the case for custom registries,
+however it is the case for DockerHub:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">registry</span><span class="p">:</span>
+  <span class="n">url</span><span class="p">:</span> <span class="s2">&quot;https://index.docker.io/v1&quot;</span>
+<span class="n">config</span><span class="p">:</span>
+  <span class="n">DockerRegistry</span><span class="p">:</span>
+    <span class="n">url</span><span class="p">:</span> <span class="s2">&quot;https://registry.hub.docker.com&quot;</span> <span class="c1"># the actual v2 registry url</span>
+    <span class="n">auth_config_url</span><span class="p">:</span> <span class="s2">&quot;https://index.docker.io/v1&quot;</span> <span class="c1"># must match above!</span>
+    <span class="n">token_url</span><span class="p">:</span> <span class="s2">&quot;https://auth.docker.io/token?service=registry.docker.io&quot;</span>
+</pre></div>
+</div>
+<p>however, BinderHub is aware of DockerHub’s peculiarities
+and can handle these without any additional configuration
+beyond <code class="docutils literal notranslate"><span class="pre">registry.url</span></code>.</p>
+</div>
+<div class="alert alert-primary">
+<p class="admonition-title">Important</p>
+<p>BinderHub assumes that <code class="docutils literal notranslate"><span class="pre">image_prefix</span></code> contains an extra level for the project name such that: <code class="docutils literal notranslate"><span class="pre">gcr.io/&lt;project-id&gt;/&lt;prefix&gt;-name:tag</span></code>.
+Hence, your <code class="docutils literal notranslate"><span class="pre">image_prefix</span></code> field should be set to: <code class="docutils literal notranslate"><span class="pre">your-registry.io/&lt;some-project-name&gt;/&lt;prefix&gt;-</span></code>.
+See <a class="reference external" href="https://github.com/jupyterhub/binderhub/issues/800">this issue</a> for more details.</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;some-project-name&gt;</span></code> can be completely arbitrary and/or made-up.
+For example, it could be the name you give your BinderHub.
+Without this extra level, you may find that your BinderHub always rebuilds images instead of pulling them from the registry.</p>
+</div>
+</div>
+</div>
+<div class="section" id="install-binderhub">
+<h2>3.4. Install BinderHub<a class="headerlink" href="#install-binderhub" title="Permalink to this headline">¶</a></h2>
+<p>First, get the latest helm chart for BinderHub.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">helm</span> <span class="n">repo</span> <span class="n">add</span> <span class="n">jupyterhub</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">jupyterhub</span><span class="o">.</span><span class="n">github</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">helm</span><span class="o">-</span><span class="n">chart</span>
+<span class="n">helm</span> <span class="n">repo</span> <span class="n">update</span>
+</pre></div>
+</div>
+<p>Next, <strong>install the Helm Chart</strong> using the configuration files
+that you’ve just created. Do this by running the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">helm</span> <span class="n">install</span> <span class="n">jupyterhub</span><span class="o">/</span><span class="n">binderhub</span> <span class="o">--</span><span class="n">version</span><span class="o">=</span><span class="mf">0.2</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="mi">3</span><span class="n">b53fce</span>  <span class="o">--</span><span class="n">name</span><span class="o">=&lt;</span><span class="n">choose</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">namespace</span><span class="o">=&lt;</span><span class="n">choose</span><span class="o">-</span><span class="n">namespace</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">f</span> <span class="n">secret</span><span class="o">.</span><span class="n">yaml</span> <span class="o">-</span><span class="n">f</span> <span class="n">config</span><span class="o">.</span><span class="n">yaml</span>
+</pre></div>
+</div>
+<p>This command will install the Helm chart released on March 3rd, 2019 as
+identified by the commit hash (the random string after <code class="docutils literal notranslate"><span class="pre">0.2.0-</span></code>), which is
+provided as a working example. You should provide the commit hash for the most
+recent release, which can be found
+<a class="reference external" href="https://jupyterhub.github.io/helm-chart/#development-releases-binderhub">here</a>.</p>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--version</span></code> refers to the version of the BinderHub <strong>Helm Chart</strong>.
+Available versions can be found
+<a class="reference external" href="https://jupyterhub.github.io/helm-chart/#development-releases-binderhub">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">namespace</span></code> may be different, but we recommend using
+the same <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">namespace</span></code> to avoid confusion. We recommend
+something descriptive and short, such as <code class="docutils literal notranslate"><span class="pre">binder</span></code>.</p></li>
+<li><p>If you run <code class="docutils literal notranslate"><span class="pre">kubectl</span> <span class="pre">get</span> <span class="pre">pod</span> <span class="pre">--namespace=&lt;namespace-from-above&gt;</span></code> you may
+notice the binder pod in <code class="docutils literal notranslate"><span class="pre">CrashLoopBackoff</span></code>. This is expected, and will
+be resolved in the next section.</p></li>
+</ul>
+</div>
+<p>This installation step will deploy both a BinderHub and a JupyterHub, but
+they are not yet set up to communicate with each other. We’ll fix this in
+the next step. Wait a few moments before moving on as the resources may take a
+few minutes to be set up.</p>
+</div>
+<div class="section" id="connect-binderhub-and-jupyterhub">
+<h2>3.5. Connect BinderHub and JupyterHub<a class="headerlink" href="#connect-binderhub-and-jupyterhub" title="Permalink to this headline">¶</a></h2>
+<p>In the google console, run the following command to print the IP address
+of the JupyterHub we just deployed.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kubectl</span> <span class="o">--</span><span class="n">namespace</span><span class="o">=&lt;</span><span class="n">namespace</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">above</span><span class="o">&gt;</span> <span class="n">get</span> <span class="n">svc</span> <span class="n">proxy</span><span class="o">-</span><span class="n">public</span>
+</pre></div>
+</div>
+<p>Copy the IP address under <code class="docutils literal notranslate"><span class="pre">EXTERNAL-IP</span></code>. This is the IP of your
+JupyterHub. Now, add the following lines to <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="p">:</span>
+  <span class="n">BinderHub</span><span class="p">:</span>
+    <span class="n">hub_url</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">IP</span> <span class="ow">in</span> <span class="n">EXTERNAL</span><span class="o">-</span><span class="n">IP</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Next, upgrade the helm chart to deploy this change:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">helm</span> <span class="n">upgrade</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">above</span><span class="o">&gt;</span> <span class="n">jupyterhub</span><span class="o">/</span><span class="n">binderhub</span> <span class="o">--</span><span class="n">version</span><span class="o">=</span><span class="mf">0.2</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="mi">3</span><span class="n">b53fce</span>  <span class="o">-</span><span class="n">f</span> <span class="n">secret</span><span class="o">.</span><span class="n">yaml</span> <span class="o">-</span><span class="n">f</span> <span class="n">config</span><span class="o">.</span><span class="n">yaml</span>
+</pre></div>
+</div>
+<p>For the first deployment of your BinderHub, the commit hash parsed to the
+<code class="docutils literal notranslate"><span class="pre">--version</span></code> argument should be the same as in step 3.4. However, when it comes
+to updating your BinderHub, you can parse the commit hash of a newer chart
+version.</p>
+</div>
+<div class="section" id="try-out-your-binderhub-deployment">
+<h2>3.6. Try out your BinderHub Deployment<a class="headerlink" href="#try-out-your-binderhub-deployment" title="Permalink to this headline">¶</a></h2>
+<p>If the <code class="docutils literal notranslate"><span class="pre">helm</span> <span class="pre">upgrade</span></code> command above succeeds, it’s time to try out your
+BinderHub deployment.</p>
+<p>First, find the IP address of the BinderHub deployment by running the following
+command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kubectl</span> <span class="o">--</span><span class="n">namespace</span><span class="o">=&lt;</span><span class="n">namespace</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">above</span><span class="o">&gt;</span> <span class="n">get</span> <span class="n">svc</span> <span class="n">binder</span>
+</pre></div>
+</div>
+<p>Note the IP address in <code class="docutils literal notranslate"><span class="pre">EXTERNAL-IP</span></code>. This is your BinderHub IP address.
+Type this IP address in your browser and a BinderHub should be waiting there
+for you.</p>
+<p>You now have a functioning BinderHub at the above IP address.</p>
+</div>
+<div class="section" id="customizing-your-deployment">
+<span id="api-limit"></span><h2>3.7. Customizing your Deployment<a class="headerlink" href="#customizing-your-deployment" title="Permalink to this headline">¶</a></h2>
+<p>The Helm chart used to install your BinderHub deployemnt exposes a number of
+optional features. Below we describe a few of the most common customizations
+and how you can configure them.</p>
+<div class="section" id="increase-your-github-api-limit">
+<h3>3.7.1. Increase your GitHub API limit<a class="headerlink" href="#increase-your-github-api-limit" title="Permalink to this headline">¶</a></h3>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>Increasing the GitHub API limit is not strictly required, but is recommended
+before sharing your BinderHub URL with users.</p>
+</div>
+<p>By default GitHub only lets you make 60 requests each hour. If you
+expect your users to serve repositories hosted on GitHub, we recommend creating
+an API access token to raise your API limit to 5000 requests an hour.</p>
+<ol class="arabic">
+<li><p>Create a new token with default (check no boxes)
+permissions <a class="reference external" href="https://github.com/settings/tokens/new">here</a>.</p></li>
+<li><p>Store your new token somewhere secure (e.g. keychain, netrc, etc.)</p></li>
+<li><p>Update <code class="docutils literal notranslate"><span class="pre">secret.yaml</span></code> by entering the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="p">:</span>
+  <span class="n">GitHubRepoProvider</span><span class="p">:</span>
+    <span class="n">access_token</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">insert_token_value_here</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>BinderHub will use this token when making
+API requests to GitHub. See the <a class="reference external" href="https://developer.github.com/v3/guides/getting-started/#authentication">GitHub authentication documentation</a> for
+more information about API limits.</p>
+</div>
+<div class="section" id="accessing-private-repositories">
+<span id="private-repos"></span><h3>3.7.2. Accessing private repositories<a class="headerlink" href="#accessing-private-repositories" title="Permalink to this headline">¶</a></h3>
+<p>By default, BinderHub doesn’t have access to private repositories
+(repositories that require credentials to clone).
+Since users never enter credentials into BinderHub,
+BinderHub <em>itself</em> must be given permission to clone any private repositories
+you want BinderHub to be able to build.</p>
+<div class="alert alert-warning">
+<p class="admonition-title">Warning</p>
+<p>Since cloning is done ‘as binderhub’
+this means that any user can build any private repository that BinderHub has access to.
+They may be private from the wider world,
+but they are not private from other users with access to the same
+BinderHub.</p>
+</div>
+<div class="section" id="github">
+<h4>3.7.2.1. GitHub<a class="headerlink" href="#github" title="Permalink to this headline">¶</a></h4>
+<p>Granting permission follows the the same steps above in <a class="reference internal" href="#api-limit"><span class="std std-ref">Customizing your Deployment</span></a> to create
+a GitHub access token and configure BinderHub to use it.
+Previously, the token only needed minimal read-only permissions (the default).
+In order to access private repositories,
+the token must have <strong>full read/write permissions on all your repos</strong> <a class="footnote-reference brackets" href="#permission" id="id5">1</a>.</p>
+<div class="figure align-center" id="id6">
+<img alt="_images/private-repo-token.png" src="_images/private-repo-token.png" />
+<p class="caption"><span class="caption-text">Creating a token with the full <code class="docutils literal notranslate"><span class="pre">repo</span></code> scope needed
+in order to clone private repos.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>You can set these permissions when you create the token,
+or change them after the fact by editing the token’s permissions at any
+time at <a class="reference external" href="https://github.com/settings/tokens">the token administration page</a>.</p>
+<dl class="footnote brackets">
+<dt class="label" id="permission"><span class="brackets"><a class="fn-backref" href="#id5">1</a></span></dt>
+<dd><p>Hopefully in the future,
+GitHub will allow more granular permissions for private repos.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="gitlab">
+<h4>3.7.2.2. GitLab<a class="headerlink" href="#gitlab" title="Permalink to this headline">¶</a></h4>
+<p>To access private GitLab repos, create an API token for your binderhub user
+under “User Settings” &gt; “Access tokens”. It at least needs the scopes “api” and
+“read_repository”.</p>
+<div class="figure align-center">
+<img alt="_images/private-gitlab-repo-token.png" src="_images/private-gitlab-repo-token.png" />
+</div>
+<p>Then update <code class="docutils literal notranslate"><span class="pre">secret.yaml</span></code> with the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="p">:</span>
+  <span class="n">GitLabRepoProvider</span><span class="p">:</span>
+    <span class="n">private_token</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">insert_token_value_here</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>This token will be used for accessing the GitLab API, and is also used as the
+Git password when cloning repos. With this token, no username is required to
+clone a repo.</p>
+</div>
+</div>
+<div class="section" id="use-docker-inside-docker-dind">
+<span id="dind"></span><h3>3.7.3. Use Docker-inside-Docker (DinD)<a class="headerlink" href="#use-docker-inside-docker-dind" title="Permalink to this headline">¶</a></h3>
+<p>By default, BinderHub will build pods with the host Docker installation.
+This often means you are stuck with whatever version of Docker provided by your
+cloud provider. BinderHub supports an alternative that uses <a class="reference external" href="https://hub.docker.com/_/docker">Docker-in-Docker
+(DinD)</a>. To turn <code class="docutils literal notranslate"><span class="pre">dind</span></code> on, you’ll need to set
+the following configuration in your <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dind</span><span class="p">:</span>
+  <span class="n">enabled</span><span class="p">:</span> <span class="n">true</span>
+  <span class="n">daemonset</span><span class="p">:</span>
+    <span class="n">image</span><span class="p">:</span>
+      <span class="n">name</span><span class="p">:</span> <span class="n">docker</span>
+      <span class="n">tag</span><span class="p">:</span> <span class="mf">18.09</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">dind</span>
+</pre></div>
+</div>
+<p>If you plan to host multiple BinderHub deployments on the same kubernetes
+cluster, you’ll also need to isolate the host socket and library directory
+for each DinD application:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dind</span><span class="p">:</span>
+  <span class="n">hostLibDir</span><span class="p">:</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">dind</span><span class="o">/</span><span class="s2">&quot;&lt;name of deployment, e.g. staging&gt;&quot;</span>
+  <span class="n">hostSocketDir</span><span class="p">:</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">dind</span><span class="o">/</span><span class="s2">&quot;&lt;name of deployment, e.g. staging&gt;&quot;</span>
+</pre></div>
+</div>
+<p>For next steps, see <a class="reference internal" href="debug.html"><span class="doc">Debugging BinderHub</span></a> and <a class="reference internal" href="turn-off.html"><span class="doc">Tear down your Binder deployment</span></a>.</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="setup-registry.html" title="previous page">2. Set up the container registry</a>
+    <a class='right-next' id="next-link" href="turn-off.html" title="next page">4. Tear down your Binder deployment</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    <footer class="footer">
+  <div class="container">
+    <p>
+          &copy; Copyright 2017, The Jupyter Team.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.0.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,429 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Customizing your BinderHub deployment &#8212; BinderHub 0.1.0 documentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="https://gitcdn.link/repo/jupyterhub/binder/master/doc/_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <link href="_static/css/index.css" rel="stylesheet">
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Enabling Authentication" href="authentication.html" />
+    <link rel="prev" title="Debugging BinderHub" href="debug.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+
+<a class="navbar-brand" href="index.html">
+  <img src="_static/logo.png" class="logo" alt="logo">
+</a>
+
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+<div id="navbar-menu" class="collapse navbar-collapse">
+  <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+    <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+    </li>
+    
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="zero-to-binderhub/index.html">Zero to BinderHub</a>
+    </li>
+    
+    <li class="nav-item active">
+        <a class="nav-link" href="customization/index.html">Customization</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="developer/index.html">Administrators and developers</a>
+    </li>
+    
+    <li class="nav-item ">
+        <a class="nav-link" href="community/index.html">Community</a>
+    </li>
+    
+    
+  </ul>
+  <ul class="navbar-nav ml-auto">
+    
+    
+  </ul>
+</div>
+    </nav>
+    
+
+    <div class="container-fluid">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="debug.html">Debugging BinderHub</a>
+              </li>
+          
+        
+          
+              <li class="active">
+                  <a href="">Customizing your BinderHub deployment</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="authentication.html">Enabling Authentication</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="https.html">Secure with HTTPS</a>
+              </li>
+          
+        
+      
+      
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+
+
+<div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#jupyterhub-customization" class="nav-link">JupyterHub customization</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#about-page-customization" class="nav-link">About page customization</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#template-customization" class="nav-link">Template customization</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#custom-configuration-for-specific-repositories" class="nav-link">Custom configuration for specific repositories</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#pre-built-events" class="nav-link">Pre-built events</a>
+        </li>
+    
+    </ul>
+</nav>
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="customizing-your-binderhub-deployment">
+<h1>Customizing your BinderHub deployment<a class="headerlink" href="#customizing-your-binderhub-deployment" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="jupyterhub-customization">
+<h2>JupyterHub customization<a class="headerlink" href="#jupyterhub-customization" title="Permalink to this headline">¶</a></h2>
+<p>Because BinderHub uses JupyterHub to manage all user sessions, you can
+customize many aspects of the resources available to the user. This is
+primarily done by modifications to your BinderHub’s Helm chart (<code class="docutils literal notranslate"><span class="pre">config.yaml</span></code>).</p>
+<p>To make edits to your JupyterHub deplyoment via <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code>, use
+the following pattern:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">binderhub</span><span class="p">:</span>
+   <span class="n">jupyterhub</span><span class="p">:</span>
+      <span class="o">&lt;</span><span class="n">JUPYTERHUB</span><span class="o">-</span><span class="n">CONFIG</span><span class="o">-</span><span class="n">YAML</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>For example, see <a class="reference external" href="https://github.com/jupyterhub/mybinder.org-deploy/blob/staging/mybinder/values.yaml#L54">this section of the mybinder.org Helm Chart</a>.</p>
+<p>For information on how to configure your JupyterHub deployment, see the
+<a class="reference external" href="https://zero-to-jupyterhub.readthedocs.io/en/latest/#customization-guide">JupyterHub for Kubernetes Customization Guide</a>.</p>
+<p>If you want to customise the spawner you can subclass it in <code class="docutils literal notranslate"><span class="pre">extraConfig</span></code>.
+For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">binderhub</span><span class="p">:</span>
+  <span class="n">jupyterhub</span><span class="p">:</span>
+    <span class="n">hub</span><span class="p">:</span>
+      <span class="n">extraConfig</span><span class="p">:</span>
+        <span class="mi">10</span><span class="o">-</span><span class="n">binder</span><span class="o">-</span><span class="n">customisations</span><span class="p">:</span> <span class="o">|</span>
+          <span class="k">class</span> <span class="nc">MyCustomBinderSpawner</span><span class="p">(</span><span class="n">BinderSpawner</span><span class="p">):</span>
+              <span class="o">...</span>
+
+          <span class="n">c</span><span class="o">.</span><span class="n">JupyterHub</span><span class="o">.</span><span class="n">spawner_class</span> <span class="o">=</span> <span class="n">MyCustomBinderSpawner</span>
+</pre></div>
+</div>
+<p>BinderHub uses the <a class="reference external" href="https://zero-to-jupyterhub.readthedocs.io/en/latest/administrator/advanced.html#hub-extraconfig">jupyterhub.hub.extraConfig setting</a>
+to customise JupyterHub.
+For example, <code class="docutils literal notranslate"><span class="pre">BinderSpawner</span></code> is defined under the <code class="docutils literal notranslate"><span class="pre">00-binder</span></code> key.
+Keys are evaluated in alphanumeric order, so later keys such as
+<code class="docutils literal notranslate"><span class="pre">10-binder-customisations</span></code> can use objects defined in earlier keys.</p>
+</div>
+<div class="section" id="about-page-customization">
+<h2>About page customization<a class="headerlink" href="#about-page-customization" title="Permalink to this headline">¶</a></h2>
+<p>BinderHub serves a simple about page at <code class="docutils literal notranslate"><span class="pre">https://BINDERHOST/about</span></code>. By default
+this shows the version of BinderHub you are running. You can add additional
+HTML to the page by setting the <code class="docutils literal notranslate"><span class="pre">c.BinderHub.about_message</span></code> configuration
+option to the raw HTML you would like to add. You can use this to display
+contact information or other details about your deployment.</p>
+</div>
+<div class="section" id="template-customization">
+<h2>Template customization<a class="headerlink" href="#template-customization" title="Permalink to this headline">¶</a></h2>
+<p>BinderHub uses <a class="reference external" href="http://jinja.pocoo.org/">Jinja</a> template engine and
+it is possible to customize templates in a BinderHub deployment.
+Here it is explained by a minimal example which shows how to use a custom logo.</p>
+<p>Before configuring BinderHub to use custom templates and static files,
+you have to provide these files to the binder pod where the application runs.
+One way to do this using <a class="reference external" href="https://kubernetes.io/docs/concepts/workloads/pods/init-containers/">Init Containers</a> and a Git repo.</p>
+<p>Firstly assume that you have a Git repo <code class="docutils literal notranslate"><span class="pre">binderhub_custom_files</span></code> which holds your custom files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>binderhub_custom_files/
+├── static
+│   └── custom_logo.svg
+└── templates
+    └── page.html
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">page.html</span></code> extends the <a class="reference external" href="https://github.com/jupyterhub/binderhub/blob/master/binderhub/templates/page.html">base page.html</a> and
+updates only the source url of the logo in order to use your custom logo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">extends</span> <span class="s2">&quot;templates/page.html&quot;</span> <span class="o">%</span><span class="p">}</span>
+
+<span class="p">{</span><span class="o">%</span> <span class="n">block</span> <span class="n">logo_image</span> <span class="o">%</span><span class="p">}</span><span class="s2">&quot;{{ EXTRA_STATIC_URL_PREFIX }}custom_logo.svg&quot;</span><span class="p">{</span><span class="o">%</span> <span class="n">endblock</span> <span class="n">logo_image</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>If you want to extend <a class="reference external" href="https://github.com/jupyterhub/binderhub/tree/master/binderhub/templates">any other base template</a>,
+you have to include <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">extends</span> <span class="pre">&quot;templates/&lt;base_template_name&gt;.html&quot;</span> <span class="pre">%}</span></code>
+in the beginning of your custom template.
+It is also possible to have completely new template instead of extending the base one.
+Then BinderHub will ignore the base one.</p>
+</div>
+<p>Now you can use <code class="docutils literal notranslate"><span class="pre">Init</span> <span class="pre">Containers</span></code> to clone that Git repo into a volume (<code class="docutils literal notranslate"><span class="pre">custom-templates</span></code>)
+which is mounted to both init container and binder container.
+To do that add the following into your <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">initContainers</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">git</span><span class="o">-</span><span class="n">clone</span><span class="o">-</span><span class="n">templates</span>
+    <span class="n">image</span><span class="p">:</span> <span class="n">alpine</span><span class="o">/</span><span class="n">git</span>
+    <span class="n">args</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">clone</span>
+      <span class="o">-</span> <span class="o">--</span><span class="n">single</span><span class="o">-</span><span class="n">branch</span>
+      <span class="o">-</span> <span class="o">--</span><span class="n">branch</span><span class="o">=</span><span class="n">master</span>
+      <span class="o">-</span> <span class="o">--</span><span class="n">depth</span><span class="o">=</span><span class="mi">1</span>
+      <span class="o">-</span> <span class="o">--</span>
+      <span class="o">-</span> <span class="o">&lt;</span><span class="n">repo_url</span><span class="o">&gt;</span>
+      <span class="o">-</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">binderhub</span><span class="o">/</span><span class="n">custom</span>
+    <span class="n">securityContext</span><span class="p">:</span>
+      <span class="n">runAsUser</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="n">volumeMounts</span><span class="p">:</span>
+      <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">custom</span><span class="o">-</span><span class="n">templates</span>
+        <span class="n">mountPath</span><span class="p">:</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">binderhub</span><span class="o">/</span><span class="n">custom</span>
+<span class="n">extraVolumes</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">custom</span><span class="o">-</span><span class="n">templates</span>
+    <span class="n">emptyDir</span><span class="p">:</span> <span class="p">{}</span>
+<span class="n">extraVolumeMounts</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">name</span><span class="p">:</span> <span class="n">custom</span><span class="o">-</span><span class="n">templates</span>
+    <span class="n">mountPath</span><span class="p">:</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">binderhub</span><span class="o">/</span><span class="n">custom</span>
+</pre></div>
+</div>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>You have to replace <code class="docutils literal notranslate"><span class="pre">&lt;repo_url&gt;</span></code> with the url of the public repo (<code class="docutils literal notranslate"><span class="pre">binderhub_custom_files</span></code>)
+where you have your templates and static files.</p>
+</div>
+<p>The final thing you have to do is to configure BinderHub,
+so it knows where to look for custom templates and static files (where the volume is mounted).
+To do that update your <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> by the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="p">:</span>
+  <span class="n">BinderHub</span><span class="p">:</span>
+    <span class="n">template_path</span><span class="p">:</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">binderhub</span><span class="o">/</span><span class="n">custom</span><span class="o">/</span><span class="n">templates</span>
+    <span class="n">extra_static_path</span><span class="p">:</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">binderhub</span><span class="o">/</span><span class="n">custom</span><span class="o">/</span><span class="n">static</span>
+    <span class="n">extra_static_url_prefix</span><span class="p">:</span> <span class="o">/</span><span class="n">extra_static</span><span class="o">/</span>
+    <span class="n">template_variables</span><span class="p">:</span>
+        <span class="n">EXTRA_STATIC_URL_PREFIX</span><span class="p">:</span> <span class="s2">&quot;/extra_static/&quot;</span>
+</pre></div>
+</div>
+<div class="alert alert-warning">
+<p class="admonition-title">Warning</p>
+<p>You have to set the <code class="docutils literal notranslate"><span class="pre">extra_static_url_prefix</span></code> different than <code class="docutils literal notranslate"><span class="pre">/static/</span></code>
+which is the default static url prefix of BinderHub.
+Otherwise default one overrides it and BinderHub only uses default static files.</p>
+</div>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>In this example a custom template variable (<code class="docutils literal notranslate"><span class="pre">EXTRA_STATIC_URL_PREFIX</span></code>)
+to hold the value of <code class="docutils literal notranslate"><span class="pre">extra_static_url_prefix</span></code> is also defined,
+which was used in custom <code class="docutils literal notranslate"><span class="pre">page.html</span></code>.
+This is good to do specially if you have many custom templates and static files.</p>
+</div>
+</div>
+<div class="section" id="custom-configuration-for-specific-repositories">
+<span id="repo-specific-config"></span><h2>Custom configuration for specific repositories<a class="headerlink" href="#custom-configuration-for-specific-repositories" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes you would like to provide a repository-specific configuration.
+For example, if you’d like certain repositories to have <strong>higher pod quotas</strong>
+than others, or if you’d like to provide certain resources to a subset of
+repositories.</p>
+<p>To override the configuration for a specific repository, you can provide
+a list of dictionaries that allow you to provide a pattern to match against
+each repository’s specification, and override configuration values for any
+repositories that match this pattern.</p>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>If you provide <strong>multiple patterns that match a single repository</strong> in your
+spec-specific configuration, then <strong>later values in the list will override
+earlier values</strong>.</p>
+</div>
+<p>To define this list of patterns and configuration overrides, use the
+following pattern in your Helm Chart (here we show an example using
+<code class="docutils literal notranslate"><span class="pre">GitHubRepoProvider</span></code>, but this works for other RepoProviders as well):</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">config</span><span class="p">:</span>
+    <span class="nt">GitHubRepoProvider</span><span class="p">:</span>
+      <span class="nt">spec_config</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">pattern</span><span class="p">:</span> <span class="nt">^ines/spacy-binder.*</span><span class="p">:</span>
+          <span class="nt">config</span><span class="p">:</span>
+             <span class="nt">key1</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">value1</span>
+        <span class="p p-Indicator">-</span> <span class="nt">pattern</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pattern2</span>
+          <span class="nt">config</span><span class="p">:</span>
+             <span class="nt">key1</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">othervalue1</span>
+             <span class="nt">key2</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">othervalue2</span>
+</pre></div>
+</div>
+<p>For example, the following specification configuration will assign a
+pod quota of 999 to the spacy-binder repository, and a pod quota
+of 1337 to any repository in the JupyterHub organization.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">config</span><span class="p">:</span>
+    <span class="nt">GitHubRepoProvider</span><span class="p">:</span>
+      <span class="nt">spec_config</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">pattern</span><span class="p">:</span> <span class="nt">^ines/spacy-binder.*</span><span class="p">:</span>
+          <span class="nt">config</span><span class="p">:</span>
+             <span class="nt">quota</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">999</span>
+        <span class="p p-Indicator">-</span> <span class="nt">pattern</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">^jupyterhub.*</span>
+          <span class="nt">config</span><span class="p">:</span>
+             <span class="nt">quota</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1337</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pre-built-events">
+<h2>Pre-built events<a class="headerlink" href="#pre-built-events" title="Permalink to this headline">¶</a></h2>
+<p>Everytime a user launch a repository, Binderhub will create a k8s pod that uses
+<a class="reference external" href="https://github.com/jupyter/repo2docker">repo2docker</a> to prepare the user’s
+environment. You can find more information on the building process <a class="reference external" href="https://binderhub.readthedocs.io/en/latest/overview.html#what-happens-when-a-user-clicks-a-binder-link">here</a>.</p>
+<p>It is now possible to specify additionnal events just before <code class="docutils literal notranslate"><span class="pre">repo2docker</span></code> using one or multiple
+<a class="reference external" href="https://kubernetes.io/docs/concepts/workloads/pods/init-containers/">Init Containers</a>.
+These could be used if you want to run long and intensive jobs directly on the server,
+without impacting user’s notebook runtime.</p>
+<p>Examples of such events are :</p>
+<ul class="simple">
+<li><p>running costly pipelines using the full ressources from the server</p></li>
+<li><p>building dynamic html objects to be rendered inside the user’s notebook</p></li>
+<li><p>pre-pulling data into the server</p></li>
+</ul>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>As for a standard build, the <code class="docutils literal notranslate"><span class="pre">Init</span> <span class="pre">Containers</span></code> commands are triggered again before
+<code class="docutils literal notranslate"><span class="pre">repo2docker</span></code> when the user make new commits into his repository.</p>
+</div>
+<p>There is also the possibility to provide additionnal <a class="reference external" href="https://kubernetes.io/docs/concepts/storage/volumes/">volume</a> that can be mounted
+inside the build pod.</p>
+<p>The following configuration file showcase the use of <a class="reference external" href="https://github.com/SIMEXP/Repo2Data">repo2data</a> to pull data into the
+server before <code class="docutils literal notranslate"><span class="pre">repo2docker</span></code> using a
+<a class="reference external" href="https://kubernetes.io/docs/concepts/storage/volumes/#hostpath">hostPath volume</a></p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">config</span><span class="p">:</span>
+  <span class="nt">BinderHub</span><span class="p">:</span>
+    <span class="nt">extra_volume_build</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">extra-volume</span>
+        <span class="nt">hostPath</span><span class="p">:</span>
+          <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/DATA</span>
+          <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Directory</span>
+    <span class="nt">init_container_build</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">init-builder</span>
+      <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">conpdev/repo2data</span>
+      <span class="nt">args</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">-r</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">$(REPO_URL)</span>
+      <span class="nt">volumeMounts</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">extra-volume</span>
+          <span class="nt">mountPath</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/data</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="debug.html" title="previous page">Debugging BinderHub</a>
+    <a class='right-next' id="next-link" href="authentication.html" title="next page">Enabling Authentication</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    <footer class="footer">
+  <div class="container">
+    <p>
+          &copy; Copyright 2017, The Jupyter Team.<br/>
+        Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.0.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
