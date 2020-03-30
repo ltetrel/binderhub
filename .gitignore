@@ -94,9 +94,6 @@ ENV/
 # OS Stuff
 .DS_Store
 
-# Sphinx stuff
-_build/
-
 # Node stuff
 node_modules/
 package-lock.json
