@@ -217,9 +217,9 @@ Examples of prior steps that could be done are:
 
 * pre-rendering for big data visualization, thus achieving zero latency during notebook runtime
 * pre-computation of demanding applications, to reduce notebook's runtime complexity but keeping confidence
- to another user on reproducibility
+  to another user on reproducibility
 * pre-pulling data into the server, so user doesn't wait for the data to be ready and build container size
- remains low
+  remains low
 
 Using the ``init_container_build`` key in the BinderHub configuration, you can specify ``Init Containers`` 
 to be run in the build pod before ``repo2docker``. There is also the possibility to provide additionnal
