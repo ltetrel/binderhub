@@ -215,18 +215,20 @@ container is started using `Init Containers
 <https://kubernetes.io/docs/concepts/workloads/pods/init-containers/>`_.
 Examples of prior steps that could be done are:
 
-* running costly pipelines using the full ressources from the server
-* building dynamic html objects to be rendered inside the user's notebook
-* pre-pulling data into the server
+* pre-rendering for big data visualization, thus achieving zero latency during notebook runtime
+* pre-computation of demanding applications, to reduce notebook's runtime complexity but keeping confidence
+ to another user on reproducibility
+* pre-pulling data into the server, so user doesn't wait for the data to be ready and build container size
+ remains low
 
-You can now specify ``Init Containers`` in the BinderHub configuration, to run in the build pod before
-``repo2docker`` via the ``init_container_build`` key. There is also the possibility to provide additionnal
+Using the ``init_container_build`` key in the BinderHub configuration, you can specify ``Init Containers`` 
+to be run in the build pod before ``repo2docker``. There is also the possibility to provide additionnal
 `volumes <https://kubernetes.io/docs/concepts/storage/volumes/>`_ mounted to this init container
-using the ``extra_volume_build`` field.
+via the ``extra_volume_build`` key.
 
 .. note::
 
-    Commits pushed to the user's git repository will also trigger ``init_container_build`` commands.
+    It is also possible to specify multiple init containers or volumes under the key.
 
 The `repo2data <https://github.com/SIMEXP/Repo2Data>`_ python package provides a good showcase for
 the use of ``init_container_build``:
@@ -258,3 +260,7 @@ In the configuration above:
 
 Having the dataset available prior to the user pod running, this approach does not prolong the time
 for spawning a user session and keeps the Docker images clean.
+
+.. note::
+
+    Commits pushed to the user's git repository will also trigger ``init_container_build`` commands.
