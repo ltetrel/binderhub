@@ -213,22 +213,23 @@ If you want the environment to access some additionnal resources without baking 
 into the built Docker image, you may need to execute some configurations **before** the ``repo2docker``
 container is started using `Init Containers
 <https://kubernetes.io/docs/concepts/workloads/pods/init-containers/>`_.
-Examples of prior steps that could be done are:
+Some example use cases could include:
 
-* pre-rendering for big data visualization, thus achieving zero latency during notebook runtime
-* pre-computation of demanding applications, to reduce notebook's runtime complexity but keeping confidence
-  to another user on reproducibility
-* pre-pulling data into the server, so user doesn't wait for the data to be ready and build container size
-  remains low
+* Building HTML content with sizable interactive visualization objects instead of relying on static hosting
+* Creation of pre-calculated data during the build time in a user defined environment instead of retrieving
+  them from elsewhere
+* Pulling a dataset into a server and linking it to a user pod, so that the data volume is made easily
+  available to the runtime environment without inflating the built Docker image
 
-Using the ``init_container_build`` key in the BinderHub configuration, you can specify ``Init Containers`` 
-to be run in the build pod before ``repo2docker``. There is also the possibility to provide additionnal
-`volumes <https://kubernetes.io/docs/concepts/storage/volumes/>`_ mounted to this init container
-via the ``extra_volume_build`` key.
+Using the ``init_container_build`` field in the BinderHub configuration, you can specify ``Init Containers`` 
+to be run in the build pod before ``repo2docker``. Mounting additional volumes
+<https://kubernetes.io/docs/concepts/storage/volumes/>_ to this init container is also possible with
+the ``extra_volume_build`` field.
 
 .. note::
 
-    It is also possible to specify multiple init containers or volumes under the key.
+    Multiple init containers and volumes can be specified under the ``init_container_build`` and 
+    ``extra_volume_build`` fields.
 
 The `repo2data <https://github.com/SIMEXP/Repo2Data>`_ python package provides a good showcase for
 the use of ``init_container_build``:
@@ -259,8 +260,8 @@ In the configuration above:
    <https://github.com/SIMEXP/Repo2Data#github-repo-url-as-input>`_ into ``repo2data-volume``
 
 Having the dataset available prior to the user pod running, this approach does not prolong the time
-for spawning a user session and keeps the Docker images clean.
+for spawning a user session and keeps the Docker images lean.
 
 .. note::
 
-    Commits pushed to the user's git repository will also trigger ``init_container_build`` commands.
+    Commits pushed to the user's git repository will trigger ``init_container_build`` commands.
