@@ -160,7 +160,7 @@
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#pre-built-events" class="nav-link">Pre-built events</a>
+            <a href="#pre-build-steps" class="nav-link">Pre-build steps</a>
         </li>
     
     </ul>
@@ -229,7 +229,7 @@ One way to do this using <a class="reference external" href="https://kubernetes.
 <p>Firstly assume that you have a Git repo <code class="docutils literal notranslate"><span class="pre">binderhub_custom_files</span></code> which holds your custom files:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>binderhub_custom_files/
 ├── static
-│   └── custom_logo.svg
+│   └── custom_logo.svg
 └── templates
     └── page.html
 </pre></div>
@@ -353,48 +353,62 @@ of 1337 to any repository in the JupyterHub organization.</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="pre-built-events">
-<h2>Pre-built events<a class="headerlink" href="#pre-built-events" title="Permalink to this headline">¶</a></h2>
-<p>Everytime a user launch a repository, Binderhub will create a k8s pod that uses
-<a class="reference external" href="https://github.com/jupyter/repo2docker">repo2docker</a> to prepare the user’s
-environment. You can find more information on the building process <a class="reference external" href="https://binderhub.readthedocs.io/en/latest/overview.html#what-happens-when-a-user-clicks-a-binder-link">here</a>.</p>
-<p>It is now possible to specify additionnal events just before <code class="docutils literal notranslate"><span class="pre">repo2docker</span></code> using one or multiple
-<a class="reference external" href="https://kubernetes.io/docs/concepts/workloads/pods/init-containers/">Init Containers</a>.
-These could be used if you want to run long and intensive jobs directly on the server,
-without impacting user’s notebook runtime.</p>
-<p>Examples of such events are :</p>
+<div class="section" id="pre-build-steps">
+<h2>Pre-build steps<a class="headerlink" href="#pre-build-steps" title="Permalink to this headline">¶</a></h2>
+<p>A <a class="reference external" href="https://binderhub.readthedocs.io/en/latest/overview.html#what-happens-when-a-user-clicks-a-binder-link">Binder build</a>
+refers to the process of creating a virtual environment for a git repository. This operation takes
+place in a <a class="reference external" href="https://kubernetes.io/docs/concepts/workloads/pods/pod/#what-is-a-pod">Kubernetes pod</a>,
+where a <a class="reference external" href="https://github.com/jupyter/repo2docker">repo2docker</a> container does the heavy lifting
+to create the requested environment.</p>
+<p>If you want the environment to access some additionnal resources without baking them
+into the built Docker image, you may need to execute some configurations <strong>before</strong> the <code class="docutils literal notranslate"><span class="pre">repo2docker</span></code>
+container is started using <a class="reference external" href="https://kubernetes.io/docs/concepts/workloads/pods/init-containers/">Init Containers</a>.
+Examples of prior steps that could be done are:</p>
 <ul class="simple">
-<li><p>running costly pipelines using the full ressources from the server</p></li>
-<li><p>building dynamic html objects to be rendered inside the user’s notebook</p></li>
-<li><p>pre-pulling data into the server</p></li>
+<li><p>pre-rendering for big data visualization, thus achieving zero latency during notebook runtime</p></li>
+<li><p>pre-computation of demanding applications, to reduce notebook’s runtime complexity but keeping confidence
+to another user on reproducibility</p></li>
+<li><p>pre-pulling data into the server, so user doesn’t wait for the data to be ready and build container size
+remains low</p></li>
 </ul>
+<p>Using the <code class="docutils literal notranslate"><span class="pre">init_container_build</span></code> key in the BinderHub configuration, you can specify <code class="docutils literal notranslate"><span class="pre">Init</span> <span class="pre">Containers</span></code>
+to be run in the build pod before <code class="docutils literal notranslate"><span class="pre">repo2docker</span></code>. There is also the possibility to provide additionnal
+<a class="reference external" href="https://kubernetes.io/docs/concepts/storage/volumes/">volumes</a> mounted to this init container
+via the <code class="docutils literal notranslate"><span class="pre">extra_volume_build</span></code> key.</p>
 <div class="alert alert-info">
 <p class="admonition-title">Note</p>
-<p>As for a standard build, the <code class="docutils literal notranslate"><span class="pre">Init</span> <span class="pre">Containers</span></code> commands are triggered again before
-<code class="docutils literal notranslate"><span class="pre">repo2docker</span></code> when the user make new commits into his repository.</p>
+<p>It is also possible to specify multiple init containers or volumes under the key.</p>
 </div>
-<p>There is also the possibility to provide additionnal <a class="reference external" href="https://kubernetes.io/docs/concepts/storage/volumes/">volume</a> that can be mounted
-inside the build pod.</p>
-<p>The following configuration file showcase the use of <a class="reference external" href="https://github.com/SIMEXP/Repo2Data">repo2data</a> to pull data into the
-server before <code class="docutils literal notranslate"><span class="pre">repo2docker</span></code> using a
-<a class="reference external" href="https://kubernetes.io/docs/concepts/storage/volumes/#hostpath">hostPath volume</a></p>
+<p>The <a class="reference external" href="https://github.com/SIMEXP/Repo2Data">repo2data</a> python package provides a good showcase for
+the use of <code class="docutils literal notranslate"><span class="pre">init_container_build</span></code>:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">config</span><span class="p">:</span>
   <span class="nt">BinderHub</span><span class="p">:</span>
     <span class="nt">extra_volume_build</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">extra-volume</span>
+      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">repo2data-volume</span>
         <span class="nt">hostPath</span><span class="p">:</span>
           <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/DATA</span>
           <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Directory</span>
     <span class="nt">init_container_build</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">init-builder</span>
-      <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">conpdev/repo2data</span>
-      <span class="nt">args</span><span class="p">:</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">-r</span>
-        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">$(REPO_URL)</span>
-      <span class="nt">volumeMounts</span><span class="p">:</span>
-        <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">extra-volume</span>
-          <span class="nt">mountPath</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/data</span>
+        <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">conpdev/repo2data</span>
+        <span class="nt">args</span><span class="p">:</span>
+          <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">-r</span>
+          <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">$(REPO_URL)</span>
+        <span class="nt">volumeMounts</span><span class="p">:</span>
+          <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">repo2data-volume</span>
+            <span class="nt">mountPath</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/data</span>
 </pre></div>
+</div>
+<p>In the configuration above:</p>
+<ol class="arabic simple">
+<li><p>An additionnal volume <code class="docutils literal notranslate"><span class="pre">repo2data-volume</span></code> is associated to the init container</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">conpdev/repo2data</span></code> init container pull the dataset described by a <a class="reference external" href="https://github.com/SIMEXP/Repo2Data#github-repo-url-as-input">data_requirements.json</a> into <code class="docutils literal notranslate"><span class="pre">repo2data-volume</span></code></p></li>
+</ol>
+<p>Having the dataset available prior to the user pod running, this approach does not prolong the time
+for spawning a user session and keeps the Docker images clean.</p>
+<div class="alert alert-info">
+<p class="admonition-title">Note</p>
+<p>Commits pushed to the user’s git repository will also trigger <code class="docutils literal notranslate"><span class="pre">init_container_build</span></code> commands.</p>
 </div>
 </div>
 </div>

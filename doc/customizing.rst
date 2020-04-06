@@ -222,8 +222,8 @@ Some example use cases could include:
   available to the runtime environment without inflating the built Docker image
 
 Using the ``init_container_build`` field in the BinderHub configuration, you can specify ``Init Containers`` 
-to be run in the build pod before ``repo2docker``. Mounting additional volumes
-<https://kubernetes.io/docs/concepts/storage/volumes/>_ to this init container is also possible with
+to be run in the build pod before ``repo2docker``. Mounting additional `volumes
+<https://kubernetes.io/docs/concepts/storage/volumes/>`_ to this init container is also possible with
 the ``extra_volume_build`` field.
 
 .. note::
@@ -255,7 +255,7 @@ the use of ``init_container_build``:
 
 In the configuration above:
 
-1. An additionnal volume ``repo2data-volume`` is associated to the init container
+1. An additionnal volume ``repo2data-volume`` is associated with the init container
 2. The ``conpdev/repo2data`` init container pull the dataset described by a `data_requirements.json
    <https://github.com/SIMEXP/Repo2Data#github-repo-url-as-input>`_ into ``repo2data-volume``
 
